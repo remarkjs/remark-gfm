@@ -1,0 +1,132 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "delete",
+          "children": [
+            {
+              "type": "text",
+              "value": "one",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 2,
+                  "offset": 1
+                },
+                "end": {
+                  "line": 1,
+                  "column": 5,
+                  "offset": 4
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 1,
+              "offset": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 6,
+              "offset": 5
+            }
+          }
+        },
+        {
+          "type": "text",
+          "value": ", ",
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 6,
+              "offset": 5
+            },
+            "end": {
+              "line": 1,
+              "column": 8,
+              "offset": 7
+            }
+          }
+        },
+        {
+          "type": "delete",
+          "children": [
+            {
+              "type": "text",
+              "value": "two",
+              "position": {
+                "start": {
+                  "line": 1,
+                  "column": 10,
+                  "offset": 9
+                },
+                "end": {
+                  "line": 1,
+                  "column": 13,
+                  "offset": 12
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 8,
+              "offset": 7
+            },
+            "end": {
+              "line": 1,
+              "column": 15,
+              "offset": 14
+            }
+          }
+        },
+        {
+          "type": "text",
+          "value": ", ~~~three~~~.",
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 15,
+              "offset": 14
+            },
+            "end": {
+              "line": 1,
+              "column": 29,
+              "offset": 28
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 29,
+          "offset": 28
+        }
+      }
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 2,
+      "column": 1,
+      "offset": 29
+    }
+  }
+}

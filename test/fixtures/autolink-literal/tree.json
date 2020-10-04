@@ -1,0 +1,2343 @@
+{
+  "type": "root",
+  "children": [
+    {
+      "type": "heading",
+      "depth": 1,
+      "children": [
+        {
+          "type": "text",
+          "value": "Literal autolinks",
+          "position": {
+            "start": {
+              "line": 1,
+              "column": 3,
+              "offset": 2
+            },
+            "end": {
+              "line": 1,
+              "column": 20,
+              "offset": 19
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 1,
+          "column": 1,
+          "offset": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 20,
+          "offset": 19
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "WWW autolinks",
+          "position": {
+            "start": {
+              "line": 3,
+              "column": 4,
+              "offset": 24
+            },
+            "end": {
+              "line": 3,
+              "column": 17,
+              "offset": 37
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 3,
+          "column": 1,
+          "offset": 21
+        },
+        "end": {
+          "line": 3,
+          "column": 17,
+          "offset": 37
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "http://www.commonmark.org",
+          "children": [
+            {
+              "type": "text",
+              "value": "www.commonmark.org",
+              "position": {
+                "start": {
+                  "line": 5,
+                  "column": 1,
+                  "offset": 39
+                },
+                "end": {
+                  "line": 5,
+                  "column": 19,
+                  "offset": 57
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 5,
+              "column": 1,
+              "offset": 39
+            },
+            "end": {
+              "line": 5,
+              "column": 19,
+              "offset": 57
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 5,
+          "column": 1,
+          "offset": 39
+        },
+        "end": {
+          "line": 5,
+          "column": 19,
+          "offset": 57
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "http://WWW.COMMONMARK.ORG",
+          "children": [
+            {
+              "type": "text",
+              "value": "WWW.COMMONMARK.ORG",
+              "position": {
+                "start": {
+                  "line": 7,
+                  "column": 1,
+                  "offset": 59
+                },
+                "end": {
+                  "line": 7,
+                  "column": 19,
+                  "offset": 77
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 7,
+              "column": 1,
+              "offset": 59
+            },
+            "end": {
+              "line": 7,
+              "column": 19,
+              "offset": 77
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 7,
+          "column": 1,
+          "offset": 59
+        },
+        "end": {
+          "line": 7,
+          "column": 19,
+          "offset": 77
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Visit ",
+          "position": {
+            "start": {
+              "line": 9,
+              "column": 1,
+              "offset": 79
+            },
+            "end": {
+              "line": 9,
+              "column": 7,
+              "offset": 85
+            }
+          }
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "http://www.commonmark.org/help",
+          "children": [
+            {
+              "type": "text",
+              "value": "www.commonmark.org/help",
+              "position": {
+                "start": {
+                  "line": 9,
+                  "column": 7,
+                  "offset": 85
+                },
+                "end": {
+                  "line": 9,
+                  "column": 30,
+                  "offset": 108
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 9,
+              "column": 7,
+              "offset": 85
+            },
+            "end": {
+              "line": 9,
+              "column": 30,
+              "offset": 108
+            }
+          }
+        },
+        {
+          "type": "text",
+          "value": " for more information.",
+          "position": {
+            "start": {
+              "line": 9,
+              "column": 30,
+              "offset": 108
+            },
+            "end": {
+              "line": 9,
+              "column": 52,
+              "offset": 130
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 9,
+          "column": 1,
+          "offset": 79
+        },
+        "end": {
+          "line": 9,
+          "column": 52,
+          "offset": 130
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Visit ",
+          "position": {
+            "start": {
+              "line": 11,
+              "column": 1,
+              "offset": 132
+            },
+            "end": {
+              "line": 11,
+              "column": 7,
+              "offset": 138
+            }
+          }
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "http://www.commonmark.org",
+          "children": [
+            {
+              "type": "text",
+              "value": "www.commonmark.org",
+              "position": {
+                "start": {
+                  "line": 11,
+                  "column": 7,
+                  "offset": 138
+                },
+                "end": {
+                  "line": 11,
+                  "column": 25,
+                  "offset": 156
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 11,
+              "column": 7,
+              "offset": 138
+            },
+            "end": {
+              "line": 11,
+              "column": 25,
+              "offset": 156
+            }
+          }
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "position": {
+            "start": {
+              "line": 11,
+              "column": 25,
+              "offset": 156
+            },
+            "end": {
+              "line": 11,
+              "column": 26,
+              "offset": 157
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 11,
+          "column": 1,
+          "offset": 132
+        },
+        "end": {
+          "line": 11,
+          "column": 26,
+          "offset": 157
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Visit ",
+          "position": {
+            "start": {
+              "line": 13,
+              "column": 1,
+              "offset": 159
+            },
+            "end": {
+              "line": 13,
+              "column": 7,
+              "offset": 165
+            }
+          }
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "http://www.commonmark.org/a.b",
+          "children": [
+            {
+              "type": "text",
+              "value": "www.commonmark.org/a.b",
+              "position": {
+                "start": {
+                  "line": 13,
+                  "column": 7,
+                  "offset": 165
+                },
+                "end": {
+                  "line": 13,
+                  "column": 29,
+                  "offset": 187
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 13,
+              "column": 7,
+              "offset": 165
+            },
+            "end": {
+              "line": 13,
+              "column": 29,
+              "offset": 187
+            }
+          }
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "position": {
+            "start": {
+              "line": 13,
+              "column": 29,
+              "offset": 187
+            },
+            "end": {
+              "line": 13,
+              "column": 30,
+              "offset": 188
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 13,
+          "column": 1,
+          "offset": 159
+        },
+        "end": {
+          "line": 13,
+          "column": 30,
+          "offset": 188
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "www.aaa.bbb.ccc_ccc",
+          "position": {
+            "start": {
+              "line": 15,
+              "column": 1,
+              "offset": 190
+            },
+            "end": {
+              "line": 15,
+              "column": 20,
+              "offset": 209
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 15,
+          "column": 1,
+          "offset": 190
+        },
+        "end": {
+          "line": 15,
+          "column": 20,
+          "offset": 209
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "www.aaa_bbb.ccc",
+          "position": {
+            "start": {
+              "line": 17,
+              "column": 1,
+              "offset": 211
+            },
+            "end": {
+              "line": 17,
+              "column": 16,
+              "offset": 226
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 17,
+          "column": 1,
+          "offset": 211
+        },
+        "end": {
+          "line": 17,
+          "column": 16,
+          "offset": 226
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "www.aaa.bbb.ccc.ddd_ddd",
+          "position": {
+            "start": {
+              "line": 19,
+              "column": 1,
+              "offset": 228
+            },
+            "end": {
+              "line": 19,
+              "column": 24,
+              "offset": 251
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 19,
+          "column": 1,
+          "offset": 228
+        },
+        "end": {
+          "line": 19,
+          "column": 24,
+          "offset": 251
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "www.aaa.bbb.ccc_ccc.ddd",
+          "position": {
+            "start": {
+              "line": 21,
+              "column": 1,
+              "offset": 253
+            },
+            "end": {
+              "line": 21,
+              "column": 24,
+              "offset": 276
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 21,
+          "column": 1,
+          "offset": 253
+        },
+        "end": {
+          "line": 21,
+          "column": 24,
+          "offset": 276
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "http://www.aaa.bbb_bbb.ccc.ddd",
+          "children": [
+            {
+              "type": "text",
+              "value": "www.aaa.bbb_bbb.ccc.ddd",
+              "position": {
+                "start": {
+                  "line": 23,
+                  "column": 1,
+                  "offset": 278
+                },
+                "end": {
+                  "line": 23,
+                  "column": 24,
+                  "offset": 301
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 23,
+              "column": 1,
+              "offset": 278
+            },
+            "end": {
+              "line": 23,
+              "column": 24,
+              "offset": 301
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 23,
+          "column": 1,
+          "offset": 278
+        },
+        "end": {
+          "line": 23,
+          "column": 24,
+          "offset": 301
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "http://www.aaa_aaa.bbb.ccc.ddd",
+          "children": [
+            {
+              "type": "text",
+              "value": "www.aaa_aaa.bbb.ccc.ddd",
+              "position": {
+                "start": {
+                  "line": 25,
+                  "column": 1,
+                  "offset": 303
+                },
+                "end": {
+                  "line": 25,
+                  "column": 24,
+                  "offset": 326
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 25,
+              "column": 1,
+              "offset": 303
+            },
+            "end": {
+              "line": 25,
+              "column": 24,
+              "offset": 326
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 25,
+          "column": 1,
+          "offset": 303
+        },
+        "end": {
+          "line": 25,
+          "column": 24,
+          "offset": 326
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Visit ",
+          "position": {
+            "start": {
+              "line": 27,
+              "column": 1,
+              "offset": 328
+            },
+            "end": {
+              "line": 27,
+              "column": 7,
+              "offset": 334
+            }
+          }
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "http://www.commonmark.org",
+          "children": [
+            {
+              "type": "text",
+              "value": "www.commonmark.org",
+              "position": {
+                "start": {
+                  "line": 27,
+                  "column": 7,
+                  "offset": 334
+                },
+                "end": {
+                  "line": 27,
+                  "column": 25,
+                  "offset": 352
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 27,
+              "column": 7,
+              "offset": 334
+            },
+            "end": {
+              "line": 27,
+              "column": 25,
+              "offset": 352
+            }
+          }
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "position": {
+            "start": {
+              "line": 27,
+              "column": 25,
+              "offset": 352
+            },
+            "end": {
+              "line": 27,
+              "column": 26,
+              "offset": 353
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 27,
+          "column": 1,
+          "offset": 328
+        },
+        "end": {
+          "line": 27,
+          "column": 26,
+          "offset": 353
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Visit ",
+          "position": {
+            "start": {
+              "line": 29,
+              "column": 1,
+              "offset": 355
+            },
+            "end": {
+              "line": 29,
+              "column": 7,
+              "offset": 361
+            }
+          }
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "http://www.commonmark.org/a.b",
+          "children": [
+            {
+              "type": "text",
+              "value": "www.commonmark.org/a.b",
+              "position": {
+                "start": {
+                  "line": 29,
+                  "column": 7,
+                  "offset": 361
+                },
+                "end": {
+                  "line": 29,
+                  "column": 29,
+                  "offset": 383
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 29,
+              "column": 7,
+              "offset": 361
+            },
+            "end": {
+              "line": 29,
+              "column": 29,
+              "offset": 383
+            }
+          }
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "position": {
+            "start": {
+              "line": 29,
+              "column": 29,
+              "offset": 383
+            },
+            "end": {
+              "line": 29,
+              "column": 30,
+              "offset": 384
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 29,
+          "column": 1,
+          "offset": 355
+        },
+        "end": {
+          "line": 29,
+          "column": 30,
+          "offset": 384
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "http://www.google.com/search?q=Markup+(business)",
+          "children": [
+            {
+              "type": "text",
+              "value": "www.google.com/search?q=Markup+(business)",
+              "position": {
+                "start": {
+                  "line": 31,
+                  "column": 1,
+                  "offset": 386
+                },
+                "end": {
+                  "line": 31,
+                  "column": 42,
+                  "offset": 427
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 31,
+              "column": 1,
+              "offset": 386
+            },
+            "end": {
+              "line": 31,
+              "column": 42,
+              "offset": 427
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 31,
+          "column": 1,
+          "offset": 386
+        },
+        "end": {
+          "line": 31,
+          "column": 42,
+          "offset": 427
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "http://www.google.com/search?q=Markup+(business)",
+          "children": [
+            {
+              "type": "text",
+              "value": "www.google.com/search?q=Markup+(business)",
+              "position": {
+                "start": {
+                  "line": 33,
+                  "column": 1,
+                  "offset": 429
+                },
+                "end": {
+                  "line": 33,
+                  "column": 42,
+                  "offset": 470
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 33,
+              "column": 1,
+              "offset": 429
+            },
+            "end": {
+              "line": 33,
+              "column": 42,
+              "offset": 470
+            }
+          }
+        },
+        {
+          "type": "text",
+          "value": "))",
+          "position": {
+            "start": {
+              "line": 33,
+              "column": 42,
+              "offset": 470
+            },
+            "end": {
+              "line": 33,
+              "column": 44,
+              "offset": 472
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 33,
+          "column": 1,
+          "offset": 429
+        },
+        "end": {
+          "line": 33,
+          "column": 44,
+          "offset": 472
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "(",
+          "position": {
+            "start": {
+              "line": 35,
+              "column": 1,
+              "offset": 474
+            },
+            "end": {
+              "line": 35,
+              "column": 2,
+              "offset": 475
+            }
+          }
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "http://www.google.com/search?q=Markup+(business)",
+          "children": [
+            {
+              "type": "text",
+              "value": "www.google.com/search?q=Markup+(business)",
+              "position": {
+                "start": {
+                  "line": 35,
+                  "column": 2,
+                  "offset": 475
+                },
+                "end": {
+                  "line": 35,
+                  "column": 43,
+                  "offset": 516
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 35,
+              "column": 2,
+              "offset": 475
+            },
+            "end": {
+              "line": 35,
+              "column": 43,
+              "offset": 516
+            }
+          }
+        },
+        {
+          "type": "text",
+          "value": ")",
+          "position": {
+            "start": {
+              "line": 35,
+              "column": 43,
+              "offset": 516
+            },
+            "end": {
+              "line": 35,
+              "column": 44,
+              "offset": 517
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 35,
+          "column": 1,
+          "offset": 474
+        },
+        "end": {
+          "line": 35,
+          "column": 44,
+          "offset": 517
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "(",
+          "position": {
+            "start": {
+              "line": 37,
+              "column": 1,
+              "offset": 519
+            },
+            "end": {
+              "line": 37,
+              "column": 2,
+              "offset": 520
+            }
+          }
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "http://www.google.com/search?q=Markup+(business)",
+          "children": [
+            {
+              "type": "text",
+              "value": "www.google.com/search?q=Markup+(business)",
+              "position": {
+                "start": {
+                  "line": 37,
+                  "column": 2,
+                  "offset": 520
+                },
+                "end": {
+                  "line": 37,
+                  "column": 43,
+                  "offset": 561
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 37,
+              "column": 2,
+              "offset": 520
+            },
+            "end": {
+              "line": 37,
+              "column": 43,
+              "offset": 561
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 37,
+          "column": 1,
+          "offset": 519
+        },
+        "end": {
+          "line": 37,
+          "column": 43,
+          "offset": 561
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "http://www.google.com/search?q=(business))+ok",
+          "children": [
+            {
+              "type": "text",
+              "value": "www.google.com/search?q=(business))+ok",
+              "position": {
+                "start": {
+                  "line": 39,
+                  "column": 1,
+                  "offset": 563
+                },
+                "end": {
+                  "line": 39,
+                  "column": 39,
+                  "offset": 601
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 39,
+              "column": 1,
+              "offset": 563
+            },
+            "end": {
+              "line": 39,
+              "column": 39,
+              "offset": 601
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 39,
+          "column": 1,
+          "offset": 563
+        },
+        "end": {
+          "line": 39,
+          "column": 39,
+          "offset": 601
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "http://www.google.com/search?q=commonmark&hl=en",
+          "children": [
+            {
+              "type": "text",
+              "value": "www.google.com/search?q=commonmark&hl=en",
+              "position": {
+                "start": {
+                  "line": 41,
+                  "column": 1,
+                  "offset": 603
+                },
+                "end": {
+                  "line": 41,
+                  "column": 41,
+                  "offset": 643
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 41,
+              "column": 1,
+              "offset": 603
+            },
+            "end": {
+              "line": 41,
+              "column": 41,
+              "offset": 643
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 41,
+          "column": 1,
+          "offset": 603
+        },
+        "end": {
+          "line": 41,
+          "column": 41,
+          "offset": 643
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "http://www.google.com/search?q=commonmark&hl;en",
+          "children": [
+            {
+              "type": "text",
+              "value": "www.google.com/search?q=commonmark&hl;en",
+              "position": {
+                "start": {
+                  "line": 43,
+                  "column": 1,
+                  "offset": 645
+                },
+                "end": {
+                  "line": 43,
+                  "column": 41,
+                  "offset": 685
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 43,
+              "column": 1,
+              "offset": 645
+            },
+            "end": {
+              "line": 43,
+              "column": 41,
+              "offset": 685
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 43,
+          "column": 1,
+          "offset": 645
+        },
+        "end": {
+          "line": 43,
+          "column": 41,
+          "offset": 685
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "http://www.google.com/search?q=commonmark",
+          "children": [
+            {
+              "type": "text",
+              "value": "www.google.com/search?q=commonmark",
+              "position": {
+                "start": {
+                  "line": 45,
+                  "column": 1,
+                  "offset": 687
+                },
+                "end": {
+                  "line": 45,
+                  "column": 35,
+                  "offset": 721
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 45,
+              "column": 1,
+              "offset": 687
+            },
+            "end": {
+              "line": 45,
+              "column": 35,
+              "offset": 721
+            }
+          }
+        },
+        {
+          "type": "text",
+          "value": "&hl;",
+          "position": {
+            "start": {
+              "line": 45,
+              "column": 35,
+              "offset": 721
+            },
+            "end": {
+              "line": 45,
+              "column": 39,
+              "offset": 725
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 45,
+          "column": 1,
+          "offset": 687
+        },
+        "end": {
+          "line": 45,
+          "column": 39,
+          "offset": 725
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "http://www.commonmark.org/he",
+          "children": [
+            {
+              "type": "text",
+              "value": "www.commonmark.org/he",
+              "position": {
+                "start": {
+                  "line": 47,
+                  "column": 1,
+                  "offset": 727
+                },
+                "end": {
+                  "line": 47,
+                  "column": 22,
+                  "offset": 748
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 47,
+              "column": 1,
+              "offset": 727
+            },
+            "end": {
+              "line": 47,
+              "column": 22,
+              "offset": 748
+            }
+          }
+        },
+        {
+          "type": "text",
+          "value": "<lp",
+          "position": {
+            "start": {
+              "line": 47,
+              "column": 22,
+              "offset": 748
+            },
+            "end": {
+              "line": 47,
+              "column": 25,
+              "offset": 751
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 47,
+          "column": 1,
+          "offset": 727
+        },
+        "end": {
+          "line": 47,
+          "column": 25,
+          "offset": 751
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "HTTP autolinks",
+          "position": {
+            "start": {
+              "line": 49,
+              "column": 4,
+              "offset": 756
+            },
+            "end": {
+              "line": 49,
+              "column": 18,
+              "offset": 770
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 49,
+          "column": 1,
+          "offset": 753
+        },
+        "end": {
+          "line": 49,
+          "column": 18,
+          "offset": 770
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "http://example.com",
+          "children": [
+            {
+              "type": "text",
+              "value": "http://example.com",
+              "position": {
+                "start": {
+                  "line": 51,
+                  "column": 1,
+                  "offset": 772
+                },
+                "end": {
+                  "line": 51,
+                  "column": 19,
+                  "offset": 790
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 51,
+              "column": 1,
+              "offset": 772
+            },
+            "end": {
+              "line": 51,
+              "column": 19,
+              "offset": 790
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 51,
+          "column": 1,
+          "offset": 772
+        },
+        "end": {
+          "line": 51,
+          "column": 19,
+          "offset": 790
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://example.com",
+          "children": [
+            {
+              "type": "text",
+              "value": "https://example.com",
+              "position": {
+                "start": {
+                  "line": 53,
+                  "column": 1,
+                  "offset": 792
+                },
+                "end": {
+                  "line": 53,
+                  "column": 20,
+                  "offset": 811
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 53,
+              "column": 1,
+              "offset": 792
+            },
+            "end": {
+              "line": 53,
+              "column": 20,
+              "offset": 811
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 53,
+          "column": 1,
+          "offset": 792
+        },
+        "end": {
+          "line": 53,
+          "column": 20,
+          "offset": 811
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "https://example",
+          "position": {
+            "start": {
+              "line": 55,
+              "column": 1,
+              "offset": 813
+            },
+            "end": {
+              "line": 55,
+              "column": 16,
+              "offset": 828
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 55,
+          "column": 1,
+          "offset": 813
+        },
+        "end": {
+          "line": 55,
+          "column": 16,
+          "offset": 828
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "http://commonmark.org",
+          "children": [
+            {
+              "type": "text",
+              "value": "http://commonmark.org",
+              "position": {
+                "start": {
+                  "line": 57,
+                  "column": 1,
+                  "offset": 830
+                },
+                "end": {
+                  "line": 57,
+                  "column": 22,
+                  "offset": 851
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 57,
+              "column": 1,
+              "offset": 830
+            },
+            "end": {
+              "line": 57,
+              "column": 22,
+              "offset": 851
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 57,
+          "column": 1,
+          "offset": 830
+        },
+        "end": {
+          "line": 57,
+          "column": 22,
+          "offset": 851
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "(Visit ",
+          "position": {
+            "start": {
+              "line": 59,
+              "column": 1,
+              "offset": 853
+            },
+            "end": {
+              "line": 59,
+              "column": 8,
+              "offset": 860
+            }
+          }
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://encrypted.google.com/search?q=Markup+(business)",
+          "children": [
+            {
+              "type": "text",
+              "value": "https://encrypted.google.com/search?q=Markup+(business)",
+              "position": {
+                "start": {
+                  "line": 59,
+                  "column": 8,
+                  "offset": 860
+                },
+                "end": {
+                  "line": 59,
+                  "column": 63,
+                  "offset": 915
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 59,
+              "column": 8,
+              "offset": 860
+            },
+            "end": {
+              "line": 59,
+              "column": 63,
+              "offset": 915
+            }
+          }
+        },
+        {
+          "type": "text",
+          "value": ")",
+          "position": {
+            "start": {
+              "line": 59,
+              "column": 63,
+              "offset": 915
+            },
+            "end": {
+              "line": 59,
+              "column": 64,
+              "offset": 916
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 59,
+          "column": 1,
+          "offset": 853
+        },
+        "end": {
+          "line": 59,
+          "column": 64,
+          "offset": 916
+        }
+      }
+    },
+    {
+      "type": "heading",
+      "depth": 2,
+      "children": [
+        {
+          "type": "text",
+          "value": "Email autolinks",
+          "position": {
+            "start": {
+              "line": 61,
+              "column": 4,
+              "offset": 921
+            },
+            "end": {
+              "line": 61,
+              "column": 19,
+              "offset": 936
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 61,
+          "column": 1,
+          "offset": 918
+        },
+        "end": {
+          "line": 61,
+          "column": 19,
+          "offset": 936
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "No dot: foo@barbaz",
+          "position": {
+            "start": {
+              "line": 63,
+              "column": 1,
+              "offset": 938
+            },
+            "end": {
+              "line": 63,
+              "column": 19,
+              "offset": 956
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 63,
+          "column": 1,
+          "offset": 938
+        },
+        "end": {
+          "line": 63,
+          "column": 19,
+          "offset": 956
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "No dot: foo@barbaz.",
+          "position": {
+            "start": {
+              "line": 65,
+              "column": 1,
+              "offset": 958
+            },
+            "end": {
+              "line": 65,
+              "column": 20,
+              "offset": 977
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 65,
+          "column": 1,
+          "offset": 958
+        },
+        "end": {
+          "line": 65,
+          "column": 20,
+          "offset": 977
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "mailto:foo@bar.baz",
+          "children": [
+            {
+              "type": "text",
+              "value": "foo@bar.baz",
+              "position": {
+                "start": {
+                  "line": 67,
+                  "column": 1,
+                  "offset": 979
+                },
+                "end": {
+                  "line": 67,
+                  "column": 12,
+                  "offset": 990
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 67,
+              "column": 1,
+              "offset": 979
+            },
+            "end": {
+              "line": 67,
+              "column": 12,
+              "offset": 990
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 67,
+          "column": 1,
+          "offset": 979
+        },
+        "end": {
+          "line": 67,
+          "column": 12,
+          "offset": 990
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "hello@mail+xyz.example isn’t valid, but ",
+          "position": {
+            "start": {
+              "line": 69,
+              "column": 1,
+              "offset": 992
+            },
+            "end": {
+              "line": 69,
+              "column": 41,
+              "offset": 1032
+            }
+          }
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "mailto:hello+xyz@mail.example",
+          "children": [
+            {
+              "type": "text",
+              "value": "hello+xyz@mail.example",
+              "position": {
+                "start": {
+                  "line": 69,
+                  "column": 41,
+                  "offset": 1032
+                },
+                "end": {
+                  "line": 69,
+                  "column": 63,
+                  "offset": 1054
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 69,
+              "column": 41,
+              "offset": 1032
+            },
+            "end": {
+              "line": 69,
+              "column": 63,
+              "offset": 1054
+            }
+          }
+        },
+        {
+          "type": "text",
+          "value": " is.",
+          "position": {
+            "start": {
+              "line": 69,
+              "column": 63,
+              "offset": 1054
+            },
+            "end": {
+              "line": 69,
+              "column": 67,
+              "offset": 1058
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 69,
+          "column": 1,
+          "offset": 992
+        },
+        "end": {
+          "line": 69,
+          "column": 67,
+          "offset": 1058
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "mailto:a.b-c_d@a.b",
+          "children": [
+            {
+              "type": "text",
+              "value": "a.b-c_d@a.b",
+              "position": {
+                "start": {
+                  "line": 71,
+                  "column": 1,
+                  "offset": 1060
+                },
+                "end": {
+                  "line": 71,
+                  "column": 12,
+                  "offset": 1071
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 71,
+              "column": 1,
+              "offset": 1060
+            },
+            "end": {
+              "line": 71,
+              "column": 12,
+              "offset": 1071
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 71,
+          "column": 1,
+          "offset": 1060
+        },
+        "end": {
+          "line": 71,
+          "column": 12,
+          "offset": 1071
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "mailto:a.b-c_d@a.b",
+          "children": [
+            {
+              "type": "text",
+              "value": "a.b-c_d@a.b",
+              "position": {
+                "start": {
+                  "line": 73,
+                  "column": 1,
+                  "offset": 1073
+                },
+                "end": {
+                  "line": 73,
+                  "column": 12,
+                  "offset": 1084
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 73,
+              "column": 1,
+              "offset": 1073
+            },
+            "end": {
+              "line": 73,
+              "column": 12,
+              "offset": 1084
+            }
+          }
+        },
+        {
+          "type": "text",
+          "value": ".",
+          "position": {
+            "start": {
+              "line": 73,
+              "column": 12,
+              "offset": 1084
+            },
+            "end": {
+              "line": 73,
+              "column": 13,
+              "offset": 1085
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 73,
+          "column": 1,
+          "offset": 1073
+        },
+        "end": {
+          "line": 73,
+          "column": 13,
+          "offset": 1085
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "a.b-c_d@a.b-",
+          "position": {
+            "start": {
+              "line": 75,
+              "column": 1,
+              "offset": 1087
+            },
+            "end": {
+              "line": 75,
+              "column": 13,
+              "offset": 1099
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 75,
+          "column": 1,
+          "offset": 1087
+        },
+        "end": {
+          "line": 75,
+          "column": 13,
+          "offset": 1099
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "a.b-c_d@a.b_",
+          "position": {
+            "start": {
+              "line": 77,
+              "column": 1,
+              "offset": 1101
+            },
+            "end": {
+              "line": 77,
+              "column": 13,
+              "offset": 1113
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 77,
+          "column": 1,
+          "offset": 1101
+        },
+        "end": {
+          "line": 77,
+          "column": 13,
+          "offset": 1113
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "mailto:a@a_b.c",
+          "children": [
+            {
+              "type": "text",
+              "value": "a@a_b.c",
+              "position": {
+                "start": {
+                  "line": 79,
+                  "column": 1,
+                  "offset": 1115
+                },
+                "end": {
+                  "line": 79,
+                  "column": 8,
+                  "offset": 1122
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 79,
+              "column": 1,
+              "offset": 1115
+            },
+            "end": {
+              "line": 79,
+              "column": 8,
+              "offset": 1122
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 79,
+          "column": 1,
+          "offset": 1115
+        },
+        "end": {
+          "line": 79,
+          "column": 8,
+          "offset": 1122
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "mailto:a@a-b.c",
+          "children": [
+            {
+              "type": "text",
+              "value": "a@a-b.c",
+              "position": {
+                "start": {
+                  "line": 81,
+                  "column": 1,
+                  "offset": 1124
+                },
+                "end": {
+                  "line": 81,
+                  "column": 8,
+                  "offset": 1131
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 81,
+              "column": 1,
+              "offset": 1124
+            },
+            "end": {
+              "line": 81,
+              "column": 8,
+              "offset": 1131
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 81,
+          "column": 1,
+          "offset": 1124
+        },
+        "end": {
+          "line": 81,
+          "column": 8,
+          "offset": 1131
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Can’t end in an underscore followed by a period: aaa@a.b_.",
+          "position": {
+            "start": {
+              "line": 83,
+              "column": 1,
+              "offset": 1133
+            },
+            "end": {
+              "line": 83,
+              "column": 59,
+              "offset": 1191
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 83,
+          "column": 1,
+          "offset": 1133
+        },
+        "end": {
+          "line": 83,
+          "column": 59,
+          "offset": 1191
+        }
+      }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "text",
+          "value": "Can contain an underscore followed by a period: ",
+          "position": {
+            "start": {
+              "line": 85,
+              "column": 1,
+              "offset": 1193
+            },
+            "end": {
+              "line": 85,
+              "column": 49,
+              "offset": 1241
+            }
+          }
+        },
+        {
+          "type": "link",
+          "title": null,
+          "url": "mailto:aaa@a.b_.c",
+          "children": [
+            {
+              "type": "text",
+              "value": "aaa@a.b_.c",
+              "position": {
+                "start": {
+                  "line": 85,
+                  "column": 49,
+                  "offset": 1241
+                },
+                "end": {
+                  "line": 85,
+                  "column": 59,
+                  "offset": 1251
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 85,
+              "column": 49,
+              "offset": 1241
+            },
+            "end": {
+              "line": 85,
+              "column": 59,
+              "offset": 1251
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 85,
+          "column": 1,
+          "offset": 1193
+        },
+        "end": {
+          "line": 85,
+          "column": 59,
+          "offset": 1251
+        }
+      }
+    }
+  ],
+  "position": {
+    "start": {
+      "line": 1,
+      "column": 1,
+      "offset": 0
+    },
+    "end": {
+      "line": 86,
+      "column": 1,
+      "offset": 1252
+    }
+  }
+}
