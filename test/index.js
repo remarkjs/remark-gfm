@@ -29,9 +29,7 @@ test('fixtures', function (t) {
 
   t.plan(entries.length)
 
-  entries.forEach(each)
-
-  function each(fixture) {
+  entries.forEach((fixture) => {
     t.test(fixture, function (st) {
       var file = vfile.readSync(path.join(base, fixture, 'input.md'))
       var input = String(file.contents)
@@ -74,5 +72,5 @@ test('fixtures', function (t) {
 
       st.end()
     })
-  }
+  })
 })

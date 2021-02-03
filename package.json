@@ -49,7 +49,7 @@
     "tape": "^5.0.0",
     "to-vfile": "^6.0.0",
     "unified": "^9.0.0",
-    "xo": "^0.33.0"
+    "xo": "^0.37.0"
   },
   "scripts": {
     "format": "remark . -qfo --ignore-pattern test/ && prettier . -w --loglevel warn && xo --fix",
