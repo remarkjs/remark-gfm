@@ -2261,6 +2261,58 @@
           "offset": 1251
         }
       }
+    },
+    {
+      "type": "paragraph",
+      "children": [
+        {
+          "type": "link",
+          "title": null,
+          "url": "https://google.com",
+          "children": [
+            {
+              "type": "text",
+              "value": "https://google.com",
+              "position": {
+                "start": {
+                  "line": 87,
+                  "column": 2,
+                  "offset": 1254
+                },
+                "end": {
+                  "line": 87,
+                  "column": 20,
+                  "offset": 1272
+                }
+              }
+            }
+          ],
+          "position": {
+            "start": {
+              "line": 87,
+              "column": 1,
+              "offset": 1253
+            },
+            "end": {
+              "line": 87,
+              "column": 41,
+              "offset": 1293
+            }
+          }
+        }
+      ],
+      "position": {
+        "start": {
+          "line": 87,
+          "column": 1,
+          "offset": 1253
+        },
+        "end": {
+          "line": 87,
+          "column": 41,
+          "offset": 1293
+        }
+      }
     }
   ],
   "position": {
@@ -2270,9 +2322,9 @@
       "offset": 0
     },
     "end": {
-      "line": 86,
+      "line": 88,
       "column": 1,
-      "offset": 1252
+      "offset": 1294
     }
   }
 }
