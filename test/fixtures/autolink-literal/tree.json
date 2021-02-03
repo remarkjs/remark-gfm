@@ -430,19 +430,7 @@
       "children": [
         {
           "type": "text",
-          "value": "www.aaa.bbb.ccc_ccc",
-          "position": {
-            "start": {
-              "line": 15,
-              "column": 1,
-              "offset": 190
-            },
-            "end": {
-              "line": 15,
-              "column": 20,
-              "offset": 209
-            }
-          }
+          "value": "www.aaa.bbb.ccc_ccc"
         }
       ],
       "position": {
@@ -463,19 +451,7 @@
       "children": [
         {
           "type": "text",
-          "value": "www.aaa_bbb.ccc",
-          "position": {
-            "start": {
-              "line": 17,
-              "column": 1,
-              "offset": 211
-            },
-            "end": {
-              "line": 17,
-              "column": 16,
-              "offset": 226
-            }
-          }
+          "value": "www.aaa_bbb.ccc"
         }
       ],
       "position": {
@@ -496,19 +472,7 @@
       "children": [
         {
           "type": "text",
-          "value": "www.aaa.bbb.ccc.ddd_ddd",
-          "position": {
-            "start": {
-              "line": 19,
-              "column": 1,
-              "offset": 228
-            },
-            "end": {
-              "line": 19,
-              "column": 24,
-              "offset": 251
-            }
-          }
+          "value": "www.aaa.bbb.ccc.ddd_ddd"
         }
       ],
       "position": {
@@ -529,19 +493,7 @@
       "children": [
         {
           "type": "text",
-          "value": "www.aaa.bbb.ccc_ccc.ddd",
-          "position": {
-            "start": {
-              "line": 21,
-              "column": 1,
-              "offset": 253
-            },
-            "end": {
-              "line": 21,
-              "column": 24,
-              "offset": 276
-            }
-          }
+          "value": "www.aaa.bbb.ccc_ccc.ddd"
         }
       ],
       "position": {
@@ -1535,8 +1487,27 @@
       "type": "paragraph",
       "children": [
         {
-          "type": "text",
-          "value": "https://example",
+          "type": "link",
+          "title": null,
+          "url": "https://example",
+          "children": [
+            {
+              "type": "text",
+              "value": "https://example",
+              "position": {
+                "start": {
+                  "line": 55,
+                  "column": 1,
+                  "offset": 813
+                },
+                "end": {
+                  "line": 55,
+                  "column": 16,
+                  "offset": 828
+                }
+              }
+            }
+          ],
           "position": {
             "start": {
               "line": 55,
@@ -2061,19 +2032,7 @@
       "children": [
         {
           "type": "text",
-          "value": "a.b-c_d@a.b-",
-          "position": {
-            "start": {
-              "line": 75,
-              "column": 1,
-              "offset": 1087
-            },
-            "end": {
-              "line": 75,
-              "column": 13,
-              "offset": 1099
-            }
-          }
+          "value": "a.b-c_d@a.b-"
         }
       ],
       "position": {
@@ -2094,19 +2053,7 @@
       "children": [
         {
           "type": "text",
-          "value": "a.b-c_d@a.b_",
-          "position": {
-            "start": {
-              "line": 77,
-              "column": 1,
-              "offset": 1101
-            },
-            "end": {
-              "line": 77,
-              "column": 13,
-              "offset": 1113
-            }
-          }
+          "value": "a.b-c_d@a.b_"
         }
       ],
       "position": {
@@ -2231,19 +2178,7 @@
       "children": [
         {
           "type": "text",
-          "value": "Can’t end in an underscore followed by a period: aaa@a.b_.",
-          "position": {
-            "start": {
-              "line": 83,
-              "column": 1,
-              "offset": 1133
-            },
-            "end": {
-              "line": 83,
-              "column": 59,
-              "offset": 1191
-            }
-          }
+          "value": "Can’t end in an underscore followed by a period: aaa@a.b_."
         }
       ],
       "position": {

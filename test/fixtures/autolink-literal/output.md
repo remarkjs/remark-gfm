@@ -52,7 +52,7 @@ Visit [www.commonmark.org/a.b](http://www.commonmark.org/a.b).
 
 <https://example.com>
 
-https\://example
+<https://example>
 
 <http://commonmark.org>
 
