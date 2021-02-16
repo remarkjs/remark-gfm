@@ -171,9 +171,9 @@ abide by its terms.
 
 <!-- Definitions -->
 
-[build-badge]: https://img.shields.io/travis/remarkjs/remark-gfm/main.svg
+[build-badge]: https://github.com/remarkjs/remark-gfm/workflows/main/badge.svg
 
-[build]: https://travis-ci.org/remarkjs/remark-gfm
+[build]: https://github.com/remarkjs/remark-gfm/actions
 
 [coverage-badge]: https://img.shields.io/codecov/c/github/remarkjs/remark-gfm.svg
 
