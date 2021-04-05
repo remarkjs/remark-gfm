@@ -6,7 +6,6 @@ var test = require('tape')
 var vfile = require('to-vfile')
 var unified = require('unified')
 var remark = require('remark')
-var not = require('not')
 var hidden = require('is-hidden')
 var stringWidth = require('string-width')
 var gfm = require('..')
@@ -25,52 +24,63 @@ test('gfm()', function (t) {
 
 test('fixtures', function (t) {
   var base = path.join(__dirname, 'fixtures')
-  var entries = fs.readdirSync(base).filter(not(hidden))
+  var entries = fs.readdirSync(base)
+  var index = -1
+  var file
+  var input
+  var treePath
+  var config
+  var proc
+  var output
+  var actual
+  var expected
 
-  t.plan(entries.length)
+  while (++index < entries.length) {
+    if (hidden(entries[index])) continue
 
-  entries.forEach((fixture) => {
-    t.test(fixture, function (st) {
-      var file = vfile.readSync(path.join(base, fixture, 'input.md'))
-      var input = String(file.contents)
-      var outputPath = path.join(base, fixture, 'output.md')
-      var treePath = path.join(base, fixture, 'tree.json')
-      var configPath = path.join(base, fixture, 'config.json')
-      var config
-      var proc
-      var actual
-      var output
-      var expected
+    file = vfile.readSync(path.join(base, entries[index], 'input.md'))
+    input = String(file.contents)
+    treePath = path.join(base, entries[index], 'tree.json')
 
-      try {
-        config = JSON.parse(fs.readFileSync(configPath))
-      } catch (_) {}
+    try {
+      config = JSON.parse(
+        fs.readFileSync(path.join(base, entries[index], 'config.json'))
+      )
+    } catch (_) {
+      config = undefined
+    }
 
-      if (fixture === 'table-string-length') {
-        config = {stringLength: stringWidth}
-      }
+    if (entries[index] === 'table-string-length') {
+      config = {stringLength: stringWidth}
+    }
 
-      proc = remark().use(gfm, config).freeze()
-      actual = proc.parse(file)
+    proc = remark().use(gfm, config).freeze()
+    actual = proc.parse(file)
 
-      try {
-        expected = JSON.parse(fs.readFileSync(treePath))
-      } catch (_) {
-        // New fixture.
-        fs.writeFileSync(treePath, JSON.stringify(actual, 0, 2) + '\n')
-        expected = actual
-      }
+    try {
+      expected = JSON.parse(fs.readFileSync(treePath))
+    } catch (_) {
+      // New fixture.
+      fs.writeFileSync(treePath, JSON.stringify(actual, 0, 2) + '\n')
+      expected = actual
+    }
 
-      try {
-        output = fs.readFileSync(outputPath, 'utf8')
-      } catch (_) {
-        output = input
-      }
+    try {
+      output = fs.readFileSync(
+        path.join(base, entries[index], 'output.md'),
+        'utf8'
+      )
+    } catch (_) {
+      output = input
+    }
 
-      st.deepEqual(actual, expected, 'tree')
-      st.equal(String(proc.processSync(file)), output, 'process')
+    t.deepEqual(actual, expected, entries[index] + ' (tree)')
+    t.equal(
+      String(proc.processSync(file)),
+      output,
+      entries[index] + ' (process)'
+    )
+  }
 
-      st.end()
-    })
-  })
+  t.end()
 })

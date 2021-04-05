@@ -39,7 +39,6 @@
   "devDependencies": {
     "dtslint": "^4.0.0",
     "is-hidden": "^1.0.0",
-    "not": "^0.1.0",
     "nyc": "^15.0.0",
     "prettier": "^2.0.0",
     "remark": "^13.0.0",
@@ -49,7 +48,7 @@
     "tape": "^5.0.0",
     "to-vfile": "^6.0.0",
     "unified": "^9.0.0",
-    "xo": "^0.37.0"
+    "xo": "^0.38.0"
   },
   "scripts": {
     "format": "remark . -qfo --ignore-pattern test/ && prettier . -w --loglevel warn && xo --fix",
