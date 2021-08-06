@@ -1,10 +1,10 @@
 import {gfm} from 'micromark-extension-gfm'
 import {gfmFromMarkdown, gfmToMarkdown} from 'mdast-util-gfm'
 
-var warningIssued
+let warningIssued
 
 export default function remarkGfm(options) {
-  var data = this.data()
+  const data = this.data()
 
   // Old remark.
   /* c8 ignore next 14 */
