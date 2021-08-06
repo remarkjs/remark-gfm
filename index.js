@@ -1,6 +1,5 @@
-import syntax from 'micromark-extension-gfm'
-import fromMarkdown from 'mdast-util-gfm/from-markdown.js'
-import toMarkdown from 'mdast-util-gfm/to-markdown.js'
+import {gfm} from 'micromark-extension-gfm'
+import {gfmFromMarkdown, gfmToMarkdown} from 'mdast-util-gfm'
 
 var warningIssued
 
@@ -24,9 +23,9 @@ export default function remarkGfm(options) {
     )
   }
 
-  add('micromarkExtensions', syntax(options))
-  add('fromMarkdownExtensions', fromMarkdown)
-  add('toMarkdownExtensions', toMarkdown(options))
+  add('micromarkExtensions', gfm(options))
+  add('fromMarkdownExtensions', gfmFromMarkdown)
+  add('toMarkdownExtensions', gfmToMarkdown(options))
 
   function add(field, value) {
     // Other extensions.

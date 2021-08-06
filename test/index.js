@@ -1,10 +1,10 @@
 import fs from 'fs'
 import path from 'path'
 import test from 'tape'
-import vfile from 'to-vfile'
-import unified from 'unified'
-import remark from 'remark'
-import hidden from 'is-hidden'
+import {readSync} from 'to-vfile'
+import {unified} from 'unified'
+import {remark} from 'remark'
+import {isHidden} from 'is-hidden'
 import stringWidth from 'string-width'
 import gfm from '../index.js'
 
@@ -34,10 +34,10 @@ test('fixtures', function (t) {
   var expected
 
   while (++index < entries.length) {
-    if (hidden(entries[index])) continue
+    if (isHidden(entries[index])) continue
 
-    file = vfile.readSync(path.join(base, entries[index], 'input.md'))
-    input = String(file.contents)
+    file = readSync(path.join(base, entries[index], 'input.md'))
+    input = String(file.value)
     treePath = path.join(base, entries[index], 'tree.json')
 
     try {
