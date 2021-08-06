@@ -1,14 +1,12 @@
-'use strict'
-
-var fs = require('fs')
-var path = require('path')
-var test = require('tape')
-var vfile = require('to-vfile')
-var unified = require('unified')
-var remark = require('remark')
-var hidden = require('is-hidden')
-var stringWidth = require('string-width')
-var gfm = require('..')
+import fs from 'fs'
+import path from 'path'
+import test from 'tape'
+import vfile from 'to-vfile'
+import unified from 'unified'
+import remark from 'remark'
+import hidden from 'is-hidden'
+import stringWidth from 'string-width'
+import gfm from '../index.js'
 
 test('gfm()', function (t) {
   t.doesNotThrow(function () {
@@ -23,7 +21,7 @@ test('gfm()', function (t) {
 })
 
 test('fixtures', function (t) {
-  var base = path.join(__dirname, 'fixtures')
+  var base = path.join('test', 'fixtures')
   var entries = fs.readdirSync(base)
   var index = -1
   var file

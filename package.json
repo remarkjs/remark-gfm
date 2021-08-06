@@ -27,9 +27,10 @@
   "contributors": [
     "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
   ],
-  "types": "types/index.d.ts",
+  "sideEffects": false,
+  "type": "module",
+  "main": "index.js",
   "files": [
-    "types/index.d.ts",
     "index.js"
   ],
   "dependencies": {
@@ -69,6 +70,8 @@
     "prettier": true,
     "esnext": false,
     "rules": {
+      "no-var": "off",
+      "prefer-arrow-callback": "off",
       "unicorn/no-fn-reference-in-iterator": "off",
       "unicorn/prefer-optional-catch-binding": "off"
     }

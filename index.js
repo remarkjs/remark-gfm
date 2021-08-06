@@ -1,14 +1,10 @@
-'use strict'
-
-var syntax = require('micromark-extension-gfm')
-var fromMarkdown = require('mdast-util-gfm/from-markdown')
-var toMarkdown = require('mdast-util-gfm/to-markdown')
+import syntax from 'micromark-extension-gfm'
+import fromMarkdown from 'mdast-util-gfm/from-markdown.js'
+import toMarkdown from 'mdast-util-gfm/to-markdown.js'
 
 var warningIssued
 
-module.exports = gfm
-
-function gfm(options) {
+export default function remarkGfm(options) {
   var data = this.data()
 
   // Old remark.
