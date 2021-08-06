@@ -20,6 +20,9 @@ Use this plugin for remark 13+.
 
 ## Install
 
+This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c):
+Node 12+ is needed to use it and it must be `import`ed instead of `require`d.
+
 [npm][]:
 
 ```sh
@@ -52,24 +55,25 @@ www.example.com, https://example.com, and contact@example.com.
 * [x] done
 ```
 
-And our script, `example.js`, looks as follows:
+And our module, `example.js`, looks as follows:
 
 ```js
-var vfile = require('to-vfile')
-var report = require('vfile-reporter')
-var unified = require('unified')
-var parse = require('remark-parse')
-var gfm = require('remark-gfm')
-var remark2rehype = require('remark-rehype')
-var stringify = require('rehype-stringify')
+import {readSync} from 'to-vfile'
+import {reporter} from 'vfile-reporter'
+import {unified} from 'unified'
+import remarkParse from 'remark-parse'
+import remarkGfm from 'remark-gfm'
+import remarkRehype from 'remark-rehype'
+import remarkStringify from 'rehype-stringify'
 
 unified()
-  .use(parse)
-  .use(gfm)
-  .use(remark2rehype)
-  .use(stringify)
-  .process(vfile.readSync('example.md'), function (err, file) {
-    console.error(report(err || file))
+  .use(remarkParse)
+  .use(remarkGfm)
+  .use(remarkRehype)
+  .use(remarkStringify)
+  .process(readSync('example.md'))
+  .then((file) => {
+    console.error(reporter(file))
     console.log(String(file))
   })
 ```
@@ -103,7 +107,10 @@ example.md: no issues found
 
 ## API
 
-### `remark().use(gfm[, options])`
+This package exports no identifiers.
+The default export is `remarkGfm`.
+
+### `unified().use(remarkGfm[, options])`
 
 Configures remark so that it can parse and serialize GFM (autolink literals,
 strikethrough, tables, tasklists).
