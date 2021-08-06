@@ -1,3 +1,8 @@
+/**
+ * @typedef {import('mdast').Root} Root
+ * @typedef {import('../index.js').Options} Options
+ */
+
 import fs from 'fs'
 import path from 'path'
 import test from 'tape'
@@ -31,15 +36,14 @@ test('fixtures', (t) => {
     const file = readSync(path.join(base, entries[index], 'input.md'))
     const input = String(file.value)
     const treePath = path.join(base, entries[index], 'tree.json')
+    /** @type {Options|undefined} */
     let config
 
     try {
       config = JSON.parse(
-        fs.readFileSync(path.join(base, entries[index], 'config.json'))
+        String(fs.readFileSync(path.join(base, entries[index], 'config.json')))
       )
-    } catch {
-      config = undefined
-    }
+    } catch {}
 
     if (entries[index] === 'table-string-length') {
       config = {stringLength: stringWidth}
@@ -47,16 +51,18 @@ test('fixtures', (t) => {
 
     const proc = remark().use(gfm, config).freeze()
     const actual = proc.parse(file)
+    /** @type {Root} */
     let expected
 
     try {
-      expected = JSON.parse(fs.readFileSync(treePath))
+      expected = JSON.parse(String(fs.readFileSync(treePath)))
     } catch {
       // New fixture.
-      fs.writeFileSync(treePath, JSON.stringify(actual, 0, 2) + '\n')
+      fs.writeFileSync(treePath, JSON.stringify(actual, null, 2) + '\n')
       expected = actual
     }
 
+    /** @type {string} */
     let output
 
     try {
