@@ -3,8 +3,8 @@
  * @typedef {import('../index.js').Options} Options
  */
 
-import fs from 'fs'
-import path from 'path'
+import fs from 'node:fs'
+import path from 'node:path'
 import test from 'tape'
 import {readSync} from 'to-vfile'
 import {unified} from 'unified'
