@@ -6,7 +6,6 @@
       "align": [
         null,
         null,
-        null,
         null
       ],
       "children": [
@@ -84,7 +83,7 @@
               "children": [
                 {
                   "type": "text",
-                  "value": "\u001b[1m古\u001b[22m",
+                  "value": "🤔",
                   "position": {
                     "start": {
                       "line": 1,
@@ -93,8 +92,8 @@
                     },
                     "end": {
                       "line": 1,
-                      "column": 21,
-                      "offset": 20
+                      "column": 13,
+                      "offset": 12
                     }
                   }
                 }
@@ -107,41 +106,8 @@
                 },
                 "end": {
                   "line": 1,
-                  "column": 23,
-                  "offset": 22
-                }
-              }
-            },
-            {
-              "type": "tableCell",
-              "children": [
-                {
-                  "type": "text",
-                  "value": "🤔",
-                  "position": {
-                    "start": {
-                      "line": 1,
-                      "column": 24,
-                      "offset": 23
-                    },
-                    "end": {
-                      "line": 1,
-                      "column": 26,
-                      "offset": 25
-                    }
-                  }
-                }
-              ],
-              "position": {
-                "start": {
-                  "line": 1,
-                  "column": 23,
-                  "offset": 22
-                },
-                "end": {
-                  "line": 1,
-                  "column": 28,
-                  "offset": 27
+                  "column": 15,
+                  "offset": 14
                 }
               }
             }
@@ -154,8 +120,8 @@
             },
             "end": {
               "line": 1,
-              "column": 28,
-              "offset": 27
+              "column": 15,
+              "offset": 14
             }
           }
         }
@@ -168,8 +134,8 @@
         },
         "end": {
           "line": 2,
-          "column": 18,
-          "offset": 45
+          "column": 14,
+          "offset": 28
         }
       }
     }
@@ -183,7 +149,7 @@
     "end": {
       "line": 3,
       "column": 1,
-      "offset": 46
+      "offset": 29
     }
   }
 }

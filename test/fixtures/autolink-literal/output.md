@@ -12,17 +12,17 @@ Visit [www.commonmark.org](http://www.commonmark.org).
 
 Visit [www.commonmark.org/a.b](http://www.commonmark.org/a.b).
 
-www\.aaa.bbb.ccc_ccc
+www\.aaa.bbb.ccc\_ccc
 
-www\.aaa_bbb.ccc
+www\.aaa\_bbb.ccc
 
-www\.aaa.bbb.ccc.ddd_ddd
+www\.aaa.bbb.ccc.ddd\_ddd
 
-www\.aaa.bbb.ccc_ccc.ddd
+www\.aaa.bbb.ccc\_ccc.ddd
 
-[www.aaa.bbb_bbb.ccc.ddd](http://www.aaa.bbb_bbb.ccc.ddd)
+[www.aaa.bbb\_bbb.ccc.ddd](http://www.aaa.bbb\_bbb.ccc.ddd)
 
-[www.aaa_aaa.bbb.ccc.ddd](http://www.aaa_aaa.bbb.ccc.ddd)
+[www.aaa\_aaa.bbb.ccc.ddd](http://www.aaa\_aaa.bbb.ccc.ddd)
 
 Visit [www.commonmark.org](http://www.commonmark.org).
 
@@ -72,9 +72,9 @@ hello\@mail+xyz.example isn’t valid, but <hello+xyz@mail.example> is.
 
 <a.b-c_d@a.b>.
 
-a.b-c_d\@a.b-
+a.b-c\_d\@a.b-
 
-a.b-c_d\@a.b\_
+a.b-c\_d\@a.b\_
 
 <a@a_b.c>
 
