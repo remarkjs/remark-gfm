@@ -40,6 +40,12 @@ Say we have the following file, `example.md`:
 
 www.example.com, https://example.com, and contact@example.com.
 
+## Footnote
+
+A note[^1]
+
+[^1]: Big note.
+
 ## Strikethrough
 
 ~one~ or ~~two~~ tildes.
@@ -80,11 +86,16 @@ unified()
 
 Now, running `node example` yields:
 
-```html
+```txt
 example.md: no issues found
+```
+
+```html
 <h1>GFM</h1>
 <h2>Autolink literals</h2>
 <p><a href="http://www.example.com">www.example.com</a>, <a href="https://example.com">https://example.com</a>, and <a href="mailto:contact@example.com">contact@example.com</a>.</p>
+<h2>Footnote</h2>
+<p>A note<sup><a href="#user-content-fn-1" id="user-content-fnref-1" data-footnote-ref aria-describedby="footnote-label">1</a></sup></p>
 <h2>Strikethrough</h2>
 <p><del>one</del> or <del>two</del> tildes.</p>
 <h2>Table</h2>
@@ -103,6 +114,13 @@ example.md: no issues found
 <li class="task-list-item"><input type="checkbox" disabled> to do</li>
 <li class="task-list-item"><input type="checkbox" checked disabled> done</li>
 </ul>
+<section data-footnotes class="footnotes"><h2 id="footnote-label" class="sr-only">Footnotes</h2>
+<ol>
+<li id="user-content-fn-1">
+<p>Big note. <a href="#user-content-fnref-1" data-footnote-backref class="data-footnote-backref" aria-label="Back to content">↩</a></p>
+</li>
+</ol>
+</section>
 ```
 
 ## API
@@ -155,8 +173,6 @@ attacks.
 
 *   [`remark-github`](https://github.com/remarkjs/remark-github)
     — Autolink references like in GitHub issues, PRs, and comments
-*   [`remark-footnotes`](https://github.com/remarkjs/remark-footnotes)
-    — Footnotes
 *   [`remark-frontmatter`](https://github.com/remarkjs/remark-frontmatter)
     — Frontmatter (YAML, TOML, and more)
 *   [`remark-math`](https://github.com/remarkjs/remark-math)

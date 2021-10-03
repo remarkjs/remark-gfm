@@ -15,7 +15,7 @@ export default function remarkGfm(options = {}) {
   const data = this.data()
 
   add('micromarkExtensions', gfm(options))
-  add('fromMarkdownExtensions', gfmFromMarkdown)
+  add('fromMarkdownExtensions', gfmFromMarkdown())
   add('toMarkdownExtensions', gfmToMarkdown(options))
 
   /**
