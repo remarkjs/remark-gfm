@@ -1,7 +1,7 @@
 {
   "name": "remark-gfm",
   "version": "2.0.0",
-  "description": "remark plugin to support GFM (autolink literals, strikethrough, tables, tasklists)",
+  "description": "remark plugin to support GFM (autolink literals, footnotes, strikethrough, tables, tasklists)",
   "license": "MIT",
   "keywords": [
     "unified",
@@ -14,6 +14,7 @@
     "strikethrough",
     "tasklist",
     "autolink",
+    "footnote",
     "github",
     "gfm"
   ],

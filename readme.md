@@ -131,7 +131,7 @@ The default export is `remarkGfm`.
 ### `unified().use(remarkGfm[, options])`
 
 Configures remark so that it can parse and serialize GFM (autolink literals,
-strikethrough, tables, tasklists).
+footnotes, strikethrough, tables, tasklists).
 
 ##### `options`
 
