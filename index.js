@@ -7,7 +7,7 @@ import {gfm} from 'micromark-extension-gfm'
 import {gfmFromMarkdown, gfmToMarkdown} from 'mdast-util-gfm'
 
 /**
- * Plugin to support GitHub Flavored Markdown (GFM).
+ * Plugin to support GFM (autolink literals, footnotes, strikethrough, tables, tasklists).
  *
  * @type {import('unified').Plugin<[Options?]|void[], Root>}
  */
