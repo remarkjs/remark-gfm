@@ -20,9 +20,9 @@ www\.aaa.bbb.ccc.ddd\_ddd
 
 www\.aaa.bbb.ccc\_ccc.ddd
 
-[www.aaa.bbb\_bbb.ccc.ddd](http://www.aaa.bbb\_bbb.ccc.ddd)
+[www.aaa.bbb\_bbb.ccc.ddd](http://www.aaa.bbb_bbb.ccc.ddd)
 
-[www.aaa\_aaa.bbb.ccc.ddd](http://www.aaa\_aaa.bbb.ccc.ddd)
+[www.aaa\_aaa.bbb.ccc.ddd](http://www.aaa_aaa.bbb.ccc.ddd)
 
 Visit [www.commonmark.org](http://www.commonmark.org).
 
