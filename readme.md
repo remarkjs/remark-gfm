@@ -73,8 +73,7 @@ releases, by linking references to commits, issues, and users.
 
 Yet another plugin, [`remark-breaks`][remark-breaks], turns soft line endings
 (enters) into hard breaks (`<br>`s).
-GitHub does this in a few places (comments, issues, PRs, and releases), but it’s
-not semantic according to HTML.
+GitHub does this in a few places (comments, issues, PRs, and releases).
 
 ## Install
 
