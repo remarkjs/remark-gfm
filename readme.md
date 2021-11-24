@@ -361,7 +361,7 @@ no openings for [cross-site scripting (XSS)][xss] attacks.
     — support directives
 *   [`remark-math`](https://github.com/remarkjs/remark-math)
     — support math
-*   [`remark-mdx`](https://github.com/mdx-js/mdx/tree/main/packages/mdx)
+*   [`remark-mdx`](https://github.com/mdx-js/mdx/tree/main/packages/remark-mdx)
     — support MDX (JSX, expressions, ESM)
 
 ## Contribute
