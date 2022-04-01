@@ -84,17 +84,17 @@ In Node.js (version 12.20+, 14.14+, or 16.0+), install with [npm][]:
 npm install remark-gfm
 ```
 
-In Deno with [Skypack][]:
+In Deno with [`esm.sh`][esmsh]:
 
 ```js
-import remarkGfm from 'https://cdn.skypack.dev/remark-gfm@3?dts'
+import remarkGfm from 'https://esm.sh/remark-gfm@3'
 ```
 
-In browsers with [Skypack][]:
+In browsers with [`esm.sh`][esmsh]:
 
 ```html
 <script type="module">
-  import remarkGfm from 'https://cdn.skypack.dev/remark-gfm@3?min'
+  import remarkGfm from 'https://esm.sh/remark-gfm@3?bundle'
 </script>
 ```
 
@@ -408,7 +408,7 @@ abide by its terms.
 
 [npm]: https://docs.npmjs.com/cli/install
 
-[skypack]: https://www.skypack.dev
+[esmsh]: https://esm.sh
 
 [health]: https://github.com/remarkjs/.github
 
