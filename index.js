@@ -9,6 +9,7 @@ import {gfmFromMarkdown, gfmToMarkdown} from 'mdast-util-gfm'
 /**
  * Plugin to support GFM (autolink literals, footnotes, strikethrough, tables, tasklists).
  *
+ * @this {import('unified').Processor}
  * @type {import('unified').Plugin<[Options?]|void[], Root>}
  */
 export default function remarkGfm(options = {}) {
