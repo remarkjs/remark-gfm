@@ -74,7 +74,10 @@
     "trailingComma": "none"
   },
   "xo": {
-    "prettier": true
+    "prettier": true,
+    "rules": {
+      "unicorn/prefer-logical-operator-over-ternary": "off"
+    }
   },
   "remarkConfig": {
     "plugins": [
