@@ -40,8 +40,8 @@
                 },
                 "end": {
                   "line": 1,
-                  "column": 6,
-                  "offset": 5
+                  "column": 5,
+                  "offset": 4
                 }
               }
             },
@@ -68,13 +68,13 @@
               "position": {
                 "start": {
                   "line": 1,
-                  "column": 6,
-                  "offset": 5
+                  "column": 5,
+                  "offset": 4
                 },
                 "end": {
                   "line": 1,
-                  "column": 10,
-                  "offset": 9
+                  "column": 9,
+                  "offset": 8
                 }
               }
             },
@@ -101,8 +101,8 @@
               "position": {
                 "start": {
                   "line": 1,
-                  "column": 10,
-                  "offset": 9
+                  "column": 9,
+                  "offset": 8
                 },
                 "end": {
                   "line": 1,

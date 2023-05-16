@@ -5,6 +5,7 @@
 
 import fs from 'node:fs'
 import path from 'node:path'
+import process from 'node:process'
 import test from 'tape'
 import {readSync} from 'to-vfile'
 import {unified} from 'unified'
@@ -56,6 +57,10 @@ test('fixtures', (t) => {
 
     try {
       expected = JSON.parse(String(fs.readFileSync(treePath)))
+
+      if ('UPDATE' in process.env) {
+        throw new Error('Regenerate')
+      }
     } catch {
       // New fixture.
       fs.writeFileSync(treePath, JSON.stringify(actual, null, 2) + '\n')
