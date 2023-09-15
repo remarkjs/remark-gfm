@@ -28,7 +28,7 @@ export default function remarkGfm(options = {}) {
       // Other extensions
       /* c8 ignore next 2 */
       // @ts-expect-error: to do: remove when remark is released.
-      data[field] ? data[field] : (data[field] = [])
+      data[field] || (data[field] = [])
     )
 
     list.push(value)
