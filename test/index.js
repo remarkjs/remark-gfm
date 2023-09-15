@@ -3,91 +3,91 @@
  * @typedef {import('../index.js').Options} Options
  */
 
-import fs from 'node:fs'
-import path from 'node:path'
+import assert from 'node:assert/strict'
+import fs from 'node:fs/promises'
 import process from 'node:process'
-import test from 'tape'
-import {readSync} from 'to-vfile'
-import {unified} from 'unified'
-import {remark} from 'remark'
+import test from 'node:test'
 import {isHidden} from 'is-hidden'
+import {remark} from 'remark'
 import stringWidth from 'string-width'
-import gfm from '../index.js'
+import remarkGfm from '../index.js'
 
-test('gfm()', (t) => {
-  t.doesNotThrow(() => {
-    // @ts-expect-error: to do: remove when remark is released.
-    remark().use(gfm).freeze()
-  }, 'should not throw if not passed options')
+test('remarkGfm', async function (t) {
+  await t.test('should expose the public api', async function () {
+    assert.deepEqual(Object.keys(await import('../index.js')).sort(), [
+      'default'
+    ])
+  })
 
-  t.doesNotThrow(() => {
-    unified().use(gfm).freeze()
-  }, 'should not throw if without parser or compiler')
-
-  t.end()
+  await t.test('should not throw if not passed options', async function () {
+    assert.doesNotThrow(function () {
+      remark().use(remarkGfm).freeze()
+    })
+  })
 })
 
-test('fixtures', (t) => {
-  const base = path.join('test', 'fixtures')
-  const entries = fs.readdirSync(base)
+test('fixtures', async function (t) {
+  const base = new URL('fixtures/', import.meta.url)
+  const folders = await fs.readdir(base)
+
   let index = -1
 
-  while (++index < entries.length) {
-    if (isHidden(entries[index])) continue
+  while (++index < folders.length) {
+    const folder = folders[index]
 
-    const file = readSync(path.join(base, entries[index], 'input.md'))
-    const input = String(file.value)
-    const treePath = path.join(base, entries[index], 'tree.json')
-    /** @type {Options|undefined} */
-    let config
+    if (isHidden(folder)) continue
 
-    try {
-      config = JSON.parse(
-        String(fs.readFileSync(path.join(base, entries[index], 'config.json')))
-      )
-    } catch {}
+    await t.test(folder, async function () {
+      const folderUrl = new URL(folder + '/', base)
+      const inputUrl = new URL('input.md', folderUrl)
+      const outputUrl = new URL('output.md', folderUrl)
+      const treeUrl = new URL('tree.json', folderUrl)
+      const configUrl = new URL('config.json', folderUrl)
 
-    if (entries[index] === 'table-string-length') {
-      config = {stringLength: stringWidth}
-    }
+      const input = String(await fs.readFile(inputUrl))
 
-    // @ts-expect-error: to do: remove when remark is released.
-    const proc = remark().use(gfm, config).freeze()
-    const actual = proc.parse(file)
-    /** @type {Root} */
-    let expected
+      /** @type {Options | undefined} */
+      let config
+      /** @type {Root} */
+      let expected
+      /** @type {string} */
+      let output
 
-    try {
-      expected = JSON.parse(String(fs.readFileSync(treePath)))
+      try {
+        config = JSON.parse(String(await fs.readFile(configUrl)))
+      } catch {}
 
-      if ('UPDATE' in process.env) {
-        throw new Error('Regenerate')
+      if (folder === 'table-string-length') {
+        config = {stringLength: stringWidth}
       }
-    } catch {
-      // New fixture.
-      fs.writeFileSync(treePath, JSON.stringify(actual, null, 2) + '\n')
-      expected = actual
-    }
 
-    /** @type {string} */
-    let output
+      const proc = remark().use(remarkGfm, config)
+      /** @type {Root} */
+      // @ts-expect-error: remove when remark is released.
+      const actual = proc.parse(input)
 
-    try {
-      output = fs.readFileSync(
-        path.join(base, entries[index], 'output.md'),
-        'utf8'
-      )
-    } catch {
-      output = input
-    }
+      try {
+        output = String(await fs.readFile(outputUrl))
+      } catch {
+        output = input
+      }
 
-    t.deepEqual(actual, expected, entries[index] + ' (tree)')
-    t.equal(
-      String(proc.processSync(file)),
-      output,
-      entries[index] + ' (process)'
-    )
+      try {
+        if ('UPDATE' in process.env) {
+          throw new Error('Updating…')
+        }
+
+        expected = JSON.parse(String(await fs.readFile(treeUrl)))
+      } catch {
+        expected = actual
+
+        // New fixture.
+        await fs.writeFile(treeUrl, JSON.stringify(actual, undefined, 2) + '\n')
+      }
+
+      assert.deepEqual(actual, expected)
+
+      assert.equal(String(await proc.process(input)), String(output))
+    })
   }
-
-  t.end()
 })

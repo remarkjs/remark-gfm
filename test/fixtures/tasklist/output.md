@@ -1,3 +1,3 @@
-*   [x] done
-*   [ ] to do
-*   other
+* [x] done
+* [ ] to do
+* other
