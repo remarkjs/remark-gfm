@@ -43,10 +43,10 @@
     "unified": "^10.0.0"
   },
   "devDependencies": {
-    "@types/tape": "^4.0.0",
-    "c8": "^7.0.0",
+    "@types/tape": "^5.0.0",
+    "c8": "^8.0.0",
     "is-hidden": "^2.0.0",
-    "prettier": "^2.0.0",
+    "prettier": "^3.0.0",
     "remark": "^14.0.0",
     "remark-cli": "^11.0.0",
     "remark-preset-wooorm": "^9.0.0",
@@ -56,11 +56,11 @@
     "to-vfile": "^7.0.0",
     "type-coverage": "^2.0.0",
     "typescript": "^5.0.0",
-    "xo": "^0.54.0"
+    "xo": "^0.56.0"
   },
   "scripts": {
     "build": "rimraf \"test/**/*.d.ts\" \"*.d.ts\" && tsc && type-coverage",
-    "format": "remark . -qfo --ignore-pattern test/ && prettier . -w --loglevel warn && xo --fix",
+    "format": "remark . -qfo --ignore-pattern test/ && prettier . -w --log-level warn && xo --fix",
     "test-api": "node --conditions development test/index.js",
     "test-coverage": "c8 --check-coverage --branches 100 --functions 100 --lines 100 --statements 100 --reporter lcov npm run test-api",
     "test": "npm run build && npm run format && npm run test-coverage"
