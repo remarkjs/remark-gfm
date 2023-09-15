@@ -27,6 +27,7 @@ export default function remarkGfm(options = {}) {
     const list = /** @type {unknown[]} */ (
       // Other extensions
       /* c8 ignore next 2 */
+      // @ts-expect-error: to do: remove when remark is released.
       data[field] ? data[field] : (data[field] = [])
     )
 

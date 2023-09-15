@@ -37,10 +37,10 @@
     "index.js"
   ],
   "dependencies": {
-    "@types/mdast": "^3.0.0",
-    "mdast-util-gfm": "^2.0.0",
-    "micromark-extension-gfm": "^2.0.0",
-    "unified": "^10.0.0"
+    "@types/mdast": "^4.0.0",
+    "mdast-util-gfm": "^3.0.0",
+    "micromark-extension-gfm": "^3.0.0",
+    "unified": "^11.0.0"
   },
   "devDependencies": {
     "@types/tape": "^5.0.0",
@@ -53,7 +53,7 @@
     "rimraf": "^3.0.0",
     "string-width": "^6.0.0",
     "tape": "^5.0.0",
-    "to-vfile": "^7.0.0",
+    "to-vfile": "^8.0.0",
     "type-coverage": "^2.0.0",
     "typescript": "^5.0.0",
     "xo": "^0.56.0"

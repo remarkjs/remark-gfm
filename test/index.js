@@ -16,6 +16,7 @@ import gfm from '../index.js'
 
 test('gfm()', (t) => {
   t.doesNotThrow(() => {
+    // @ts-expect-error: to do: remove when remark is released.
     remark().use(gfm).freeze()
   }, 'should not throw if not passed options')
 
@@ -50,6 +51,7 @@ test('fixtures', (t) => {
       config = {stringLength: stringWidth}
     }
 
+    // @ts-expect-error: to do: remove when remark is released.
     const proc = remark().use(gfm, config).freeze()
     const actual = proc.parse(file)
     /** @type {Root} */
