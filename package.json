@@ -40,6 +40,8 @@
     "@types/mdast": "^4.0.0",
     "mdast-util-gfm": "^3.0.0",
     "micromark-extension-gfm": "^3.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-stringify": "^11.0.0",
     "unified": "^11.0.0"
   },
   "devDependencies": {
@@ -47,7 +49,7 @@
     "c8": "^8.0.0",
     "is-hidden": "^2.0.0",
     "prettier": "^3.0.0",
-    "remark": "^14.0.0",
+    "remark": "^15.0.0",
     "remark-cli": "^11.0.0",
     "remark-preset-wooorm": "^9.0.0",
     "string-width": "^6.0.0",

@@ -1,42 +1,47 @@
+/// <reference types="remark-parse" />
+/// <reference types="remark-stringify" />
+
 /**
  * @typedef {import('mdast').Root} Root
- * @typedef {import('micromark-extension-gfm').Options & import('mdast-util-gfm').Options} Options
+ * @typedef {import('mdast-util-gfm').Options} MdastOptions
+ * @typedef {import('micromark-extension-gfm').Options} MicromarkOptions
  * @typedef {import('unified').Processor<Root>} Processor
  */
 
-import {gfm} from 'micromark-extension-gfm'
+/**
+ * @typedef {MicromarkOptions & MdastOptions} Options
+ *   Configuration.
+ */
+
 import {gfmFromMarkdown, gfmToMarkdown} from 'mdast-util-gfm'
+import {gfm} from 'micromark-extension-gfm'
+
+/** @type {Options} */
+const emptyOptions = {}
 
 /**
- * Plugin to support GFM (autolink literals, footnotes, strikethrough, tables, tasklists).
+ * Add support GFM (autolink literals, footnotes, strikethrough, tables, tasklists).
  *
- * @param {Options | null | undefined} [options='yaml']
- *   Configuration (default: `'yaml'`).
+ * @param {Options | null | undefined} [options]
+ *   Configuration (optional).
  * @returns {undefined}
  *   Nothing.
  */
-export default function remarkGfm(options = {}) {
+export default function remarkGfm(options) {
   // @ts-expect-error: TS is wrong about `this`.
   // eslint-disable-next-line unicorn/no-this-assignment
   const self = /** @type {Processor} */ (this)
+  const settings = options || emptyOptions
   const data = self.data()
 
-  add('micromarkExtensions', gfm(options))
-  add('fromMarkdownExtensions', gfmFromMarkdown())
-  add('toMarkdownExtensions', gfmToMarkdown(options))
+  const micromarkExtensions =
+    data.micromarkExtensions || (data.micromarkExtensions = [])
+  const fromMarkdownExtensions =
+    data.fromMarkdownExtensions || (data.fromMarkdownExtensions = [])
+  const toMarkdownExtensions =
+    data.toMarkdownExtensions || (data.toMarkdownExtensions = [])
 
-  /**
-   * @param {string} field
-   * @param {unknown} value
-   */
-  function add(field, value) {
-    const list = /** @type {unknown[]} */ (
-      // Other extensions
-      /* c8 ignore next 2 */
-      // @ts-expect-error: to do: remove when remark is released.
-      data[field] || (data[field] = [])
-    )
-
-    list.push(value)
-  }
+  micromarkExtensions.push(gfm(settings))
+  fromMarkdownExtensions.push(gfmFromMarkdown())
+  toMarkdownExtensions.push(gfmToMarkdown(settings))
 }

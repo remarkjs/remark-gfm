@@ -62,8 +62,6 @@ test('fixtures', async function (t) {
       }
 
       const proc = remark().use(remarkGfm, config)
-      /** @type {Root} */
-      // @ts-expect-error: remove when remark is released.
       const actual = proc.parse(input)
 
       try {
