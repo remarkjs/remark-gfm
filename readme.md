@@ -96,14 +96,14 @@ npm install remark-gfm
 In Deno with [`esm.sh`][esmsh]:
 
 ```js
-import remarkGfm from 'https://esm.sh/remark-gfm@3'
+import remarkGfm from 'https://esm.sh/remark-gfm@4'
 ```
 
 In browsers with [`esm.sh`][esmsh]:
 
 ```html
 <script type="module">
-  import remarkGfm from 'https://esm.sh/remark-gfm@3?bundle'
+  import remarkGfm from 'https://esm.sh/remark-gfm@4?bundle'
 </script>
 ```
 
