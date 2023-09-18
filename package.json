@@ -33,6 +33,7 @@
   "main": "index.js",
   "types": "index.d.ts",
   "files": [
+    "lib/",
     "index.d.ts",
     "index.js"
   ],
