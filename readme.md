@@ -19,9 +19,16 @@ strikethrough, tables, tasklists).
 *   [Use](#use)
 *   [API](#api)
     *   [`unified().use(remarkGfm[, options])`](#unifieduseremarkgfm-options)
+    *   [`Options`](#options)
 *   [Examples](#examples)
     *   [Example: `singleTilde`](#example-singletilde)
     *   [Example: `stringLength`](#example-stringlength)
+*   [Bugs](#bugs)
+*   [Authoring](#authoring)
+*   [HTML](#html)
+*   [CSS](#css)
+*   [Syntax](#syntax)
+*   [Syntax tree](#syntax-tree)
 *   [Types](#types)
 *   [Compatibility](#compatibility)
 *   [Security](#security)
@@ -32,28 +39,12 @@ strikethrough, tables, tasklists).
 ## What is this?
 
 This package is a [unified][] ([remark][]) plugin to enable the extensions to
-markdown that GitHub adds: autolink literals (`www.x.com`), footnotes (`[^1]`),
-strikethrough (`~~stuff~~`), tables (`| cell |…`), and tasklists (`* [x]`).
+markdown that GitHub adds with GFM: autolink literals (`www.x.com`), footnotes
+(`[^1]`), strikethrough (`~~stuff~~`), tables (`| cell |…`), and tasklists
+(`* [x]`).
 You can use this plugin to add support for parsing and serializing them.
 These extensions by GitHub to CommonMark are called [GFM][] (GitHub Flavored
 Markdown).
-
-**unified** is a project that transforms content with abstract syntax trees
-(ASTs).
-**remark** adds support for markdown to unified.
-**mdast** is the markdown AST that remark uses.
-This is a remark plugin that transforms mdast.
-
-## When should I use this?
-
-This project is useful when you want to support the same features that GitHub
-does in files in a repo, Gists, and several other places.
-Users frequently believe that some of these extensions, specifically autolink
-literals and tables, are part of normal markdown, so using `remark-gfm` will
-help match your implementation to their understanding of markdown.
-There are several edge cases where GitHub’s implementation works in unexpected
-ways or even different than described in their spec, so *writing* in GFM is not
-always the best choice.
 
 This plugin does not handle how markdown is turned to HTML.
 That’s done by [`remark-rehype`][remark-rehype].
@@ -75,10 +66,28 @@ Yet another plugin, [`remark-breaks`][remark-breaks], turns soft line endings
 (enters) into hard breaks (`<br>`s).
 GitHub does this in a few places (comments, issues, PRs, and releases).
 
+## When should I use this?
+
+This project is useful when you want to support the same features that GitHub
+does in files in a repo, Gists, and several other places.
+Users frequently believe that some of these extensions, specifically autolink
+literals and tables, are part of normal markdown, so using `remark-gfm` will
+help match your implementation to their understanding of markdown.
+There are several edge cases where GitHub’s implementation works in unexpected
+ways or even different than described in their spec, so *writing* in GFM is not
+always the best choice.
+
+If you *just* want to turn markdown into HTML (with maybe a few extensions such
+as GFM), we recommend [`micromark`][micromark] with
+[`micromark-extension-gfm`][micromark-extension-gfm] instead.
+If you don’t use plugins and want to access the syntax tree, you can use
+[`mdast-util-from-markdown`][mdast-util-from-markdown] with
+[`mdast-util-gfm`][mdast-util-gfm].
+
 ## Install
 
-This package is [ESM only](https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c).
-In Node.js (version 12.20+, 14.14+, or 16.0+), install with [npm][]:
+This package is [ESM only][esm].
+In Node.js (version 16+), install with [npm][]:
 
 ```sh
 npm install remark-gfm
@@ -100,7 +109,7 @@ In browsers with [`esm.sh`][esmsh]:
 
 ## Use
 
-Say we have the following file `example.md`:
+Say our document `example.md` contains:
 
 ```markdown
 # GFM
@@ -130,31 +139,27 @@ A note[^1]
 * [x] done
 ```
 
-And our module `example.js` looks as follows:
+…and our module `example.js` contains:
 
 ```js
+import rehypeStringify from 'rehype-stringify'
+import remarkGfm from 'remark-gfm'
+import remarkParse from 'remark-parse'
+import remarkRehype from 'remark-rehype'
 import {read} from 'to-vfile'
 import {unified} from 'unified'
-import remarkParse from 'remark-parse'
-import remarkGfm from 'remark-gfm'
-import remarkRehype from 'remark-rehype'
-import rehypeStringify from 'rehype-stringify'
 
-main()
+const file = await unified()
+  .use(remarkParse)
+  .use(remarkGfm)
+  .use(remarkRehype)
+  .use(rehypeStringify)
+  .process(await read('example.md'))
 
-async function main() {
-  const file = await unified()
-    .use(remarkParse)
-    .use(remarkGfm)
-    .use(remarkRehype)
-    .use(rehypeStringify)
-    .process(await read('example.md'))
-
-  console.log(String(file))
-}
+console.log(String(file))
 ```
 
-Now running `node example` yields:
+…then running `node example.js` yields:
 
 ```html
 <h1>GFM</h1>
@@ -180,7 +185,7 @@ Now running `node example` yields:
 <li class="task-list-item"><input type="checkbox" disabled> to do</li>
 <li class="task-list-item"><input type="checkbox" checked disabled> done</li>
 </ul>
-<section data-footnotes class="footnotes"><h2 id="footnote-label" class="sr-only">Footnotes</h2>
+<section data-footnotes class="footnotes"><h2 class="sr-only" id="footnote-label">Footnotes</h2>
 <ol>
 <li id="user-content-fn-1">
 <p>Big note. <a href="#user-content-fnref-1" data-footnote-backref class="data-footnote-backref" aria-label="Back to content">↩</a></p>
@@ -192,44 +197,38 @@ Now running `node example` yields:
 ## API
 
 This package exports no identifiers.
-The default export is `remarkGfm`.
+The default export is [`remarkGfm`][api-remark-gfm].
 
 ### `unified().use(remarkGfm[, options])`
 
-Plugin to support [GFM][] (autolink literals, footnotes, strikethrough, tables,
+Add support GFM (autolink literals, footnotes, strikethrough, tables,
 tasklists).
 
-##### `options`
+###### Parameters
 
-Configuration (optional).
+*   `options` ([`Options`][api-options], optional)
+    — configuration
 
-###### `options.singleTilde`
+###### Returns
 
-Whether to parse strikethrough with a single tilde (`boolean`, default:
-`true`).
-Single tildes work on github.com, but are technically prohibited by the GFM
-spec.
+Nothing (`undefined`).
 
-###### `options.tableCellPadding`
+### `Options`
 
-Serialize tables with a space between delimiters (`|`) and cell content
-(`boolean`, default: `true`).
+Configuration (TypeScript type).
 
-###### `options.tablePipeAlign`
+###### Fields
 
-Serialize by aligning the delimiters (`|`) between table cells so that they all
-align nicely and form a grid (`boolean`, default: `true`).
-
-###### `options.stringLength`
-
-Function to detect the length of table cell content (`Function`, default:
-`s => s.length`).
-This is used when aligning the delimiters (`|`) between table cells.
-Full-width characters and emoji mess up delimiter alignment when viewing the
-markdown source.
-To fix this, you can pass this function, which receives the cell content and
-returns its “visible” size.
-Note that what is and isn’t visible depends on where the text is displayed.
+*   `stringLength` (`((value: string) => number)`, default: `d => d.length`)
+    — detect the size of table cells, used when aligning cells
+*   `singleTilde` (`boolean`, default: `true`)
+    — whether to support strikethrough with a single tilde;
+    single tildes work on github.com, but are technically prohibited by GFM;
+    you can always use 2 or more tildes for strikethrough
+*   `tablePipeAlign` (`boolean`, default: `true`)
+    — whether to align table pipes
+*   `tableCellPadding` (`boolean`, default: `true`)
+    — whether to add a space of padding between table pipes and cells
 
 ## Examples
 
@@ -266,20 +265,14 @@ First, let’s show the problem:
 import {remark} from 'remark'
 import remarkGfm from 'remark-gfm'
 
-main()
-
-async function main() {
-  const input = `| Alpha | Bravo |
+const input = `| Alpha | Bravo |
 | - | - |
 | 中文 | Charlie |
 | 👩‍❤️‍👩 | Delta |`
 
-  const file = await remark()
-    .use(remarkGfm)
-    .process(input)
+const file = await remark().use(remarkGfm).process(input)
 
-  console.log(String(file))
-}
+console.log(String(file))
 ```
 
 The above code shows how remark can be used to format markdown.
@@ -303,15 +296,13 @@ It can be used like so:
  import remarkGfm from 'remark-gfm'
 +import stringWidth from 'string-width'
 
- main()
-
 @@ -10,7 +11,7 @@ async function main() {
  | 👩‍❤️‍👩 | Delta |`
 
-   const file = await remark()
--    .use(remarkGfm)
-+    .use(remarkGfm, {stringLength: stringWidth})
-     .process(input)
+-const file = await remark().use(remarkGfm).process(input)
++const file = await remark()
++  .use(remarkGfm, {stringLength: stringWidth})
++  .process(input)
 
    console.log(String(file))
 ```
@@ -325,29 +316,91 @@ The output of our code with these changes is as follows:
 | 👩‍❤️‍👩    | Delta   |
 ```
 
+## Bugs
+
+For bugs present in GFM but not here, or other peculiarities that are
+supported, see each corresponding readme:
+
+*   [autolink literal](https://github.com/micromark/micromark-extension-gfm-autolink-literal#bugs)
+*   [footnote](https://github.com/micromark/micromark-extension-gfm-footnote#bugs)
+*   strikethrough: n/a
+*   [table](https://github.com/micromark/micromark-extension-gfm-table#bugs)
+*   tasklists: n/a
+
+## Authoring
+
+For recommendations on how to author GFM, see each corresponding readme:
+
+*   [autolink literal](https://github.com/micromark/micromark-extension-gfm-autolink-literal#authoring)
+*   [footnote](https://github.com/micromark/micromark-extension-gfm-footnote#authoring)
+*   [strikethrough](https://github.com/micromark/micromark-extension-gfm-strikethrough#authoring)
+*   [table](https://github.com/micromark/micromark-extension-gfm-table#authoring)
+*   [tasklists](https://github.com/micromark/micromark-extension-gfm-task-list-item#authoring)
+
+## HTML
+
+This plugin does not handle how markdown is turned to HTML.
+See [`remark-rehype`][remark-rehype] for how that happens and how to change it.
+
+## CSS
+
+For info on how GitHub styles these features, see each corresponding readme:
+
+*   [autolink literal](https://github.com/micromark/micromark-extension-gfm-autolink-literal#css)
+*   [footnote](https://github.com/micromark/micromark-extension-gfm-footnote#css)
+*   [strikethrough](https://github.com/micromark/micromark-extension-gfm-strikethrough#css)
+*   [table](https://github.com/micromark/micromark-extension-gfm-table#css)
+*   [tasklists](https://github.com/micromark/micromark-extension-gfm-task-list-item#css)
+
+## Syntax
+
+For info on the syntax of these features, see each corresponding readme:
+
+*   [autolink literal](https://github.com/micromark/micromark-extension-gfm-autolink-literal#syntax)
+*   [footnote](https://github.com/micromark/micromark-extension-gfm-footnote#syntax)
+*   [strikethrough](https://github.com/micromark/micromark-extension-gfm-strikethrough#syntax)
+*   [table](https://github.com/micromark/micromark-extension-gfm-table#syntax)
+*   [tasklists](https://github.com/micromark/micromark-extension-gfm-task-list-item#syntax)
+
+## Syntax tree
+
+For info on the syntax tree of these features, see each corresponding readme:
+
+*   [autolink literal](https://github.com/syntax-tree/mdast-util-gfm-autolink-literal#syntax-tree)
+*   [footnote](https://github.com/syntax-tree/mdast-util-gfm-footnote#syntax-tree)
+*   [strikethrough](https://github.com/syntax-tree/mdast-util-gfm-strikethrough#syntax-tree)
+*   [table](https://github.com/syntax-tree/mdast-util-gfm-table#syntax-tree)
+*   [tasklists](https://github.com/syntax-tree/mdast-util-gfm-task-list-item#syntax-tree)
+
 ## Types
 
 This package is fully typed with [TypeScript][].
-It exports an `Options` type, which specifies the interface of the accepted
-options.
+It exports the additional type [`Options`][api-options].
+
+The node types are supported in `@types/mdast` by default.
 
 ## Compatibility
 
-Projects maintained by the unified collective are compatible with all maintained
+Projects maintained by the unified collective are compatible with maintained
 versions of Node.js.
-As of now, that is Node.js 12.20+, 14.14+, and 16.0+.
-Our projects sometimes work with older versions, but this is not guaranteed.
 
-This plugin works with `remark-parse` version 10+ (`remark` version 14+).
-The previous version (v2) worked with `remark-parse` version 9 (`remark`
-version 13).
+When we cut a new major release, we drop support for unmaintained versions of
+Node.
+This means we try to keep the current release line, `remark-gfm@^3`, compatible
+with Node.js 12.
+
+This plugin works with `remark-parse` version 11+ (`remark` version 15+).
+The previous version (v3) worked with `remark-parse` version 10 (`remark`
+version 14).
+Before that, v2 worked with `remark-parse` version 9 (`remark` version 13).
 Earlier versions of `remark-parse` and `remark` had a `gfm` option that enabled
 this functionality, which defaulted to true.
 
 ## Security
 
-Use of `remark-gfm` does not involve **[rehype][]** (**[hast][]**) so there are
-no openings for [cross-site scripting (XSS)][xss] attacks.
+Use of `remark-frontmatter` does not involve **[rehype][]** ([hast][]) or user
+content so there are no openings for [cross-site scripting (XSS)][wiki-xss]
+attacks.
 
 ## Related
 
@@ -362,7 +415,7 @@ no openings for [cross-site scripting (XSS)][xss] attacks.
 *   [`remark-math`](https://github.com/remarkjs/remark-math)
     — support math
 *   [`remark-mdx`](https://github.com/mdx-js/mdx/tree/main/packages/remark-mdx)
-    — support MDX (JSX, expressions, ESM)
+    — support MDX (ESM, JSX, expressions)
 
 ## Contribute
 
@@ -392,9 +445,9 @@ abide by its terms.
 
 [downloads]: https://www.npmjs.com/package/remark-gfm
 
-[size-badge]: https://img.shields.io/bundlephobia/minzip/remark-gfm.svg
+[size-badge]: https://img.shields.io/bundlejs/size/remark-gfm
 
-[size]: https://bundlephobia.com/result?p=remark-gfm
+[size]: https://bundlejs.com/?q=remark-gfm
 
 [sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
 
@@ -407,6 +460,8 @@ abide by its terms.
 [chat]: https://github.com/remarkjs/remark/discussions
 
 [npm]: https://docs.npmjs.com/cli/install
+
+[esm]: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
 
 [esmsh]: https://esm.sh
 
@@ -422,28 +477,40 @@ abide by its terms.
 
 [author]: https://wooorm.com
 
-[remark]: https://github.com/remarkjs/remark
-
-[unified]: https://github.com/unifiedjs/unified
-
-[xss]: https://en.wikipedia.org/wiki/Cross-site_scripting
-
-[typescript]: https://www.typescriptlang.org
-
-[rehype]: https://github.com/rehypejs/rehype
+[gfm]: https://github.github.com/gfm/
 
 [hast]: https://github.com/syntax-tree/hast
 
-[gfm]: https://github.github.com/gfm/
+[mdast-util-from-markdown]: https://github.com/syntax-tree/mdast-util-from-markdown
+
+[mdast-util-gfm]: https://github.com/syntax-tree/mdast-util-gfm
+
+[micromark]: https://github.com/micromark/micromark
+
+[micromark-extension-gfm]: https://github.com/micromark/micromark-extension-gfm
+
+[rehype]: https://github.com/rehypejs/rehype
+
+[remark]: https://github.com/remarkjs/remark
+
+[remark-breaks]: https://github.com/remarkjs/remark-breaks
 
 [remark-frontmatter]: https://github.com/remarkjs/remark-frontmatter
 
 [remark-github]: https://github.com/remarkjs/remark-github
-
-[remark-breaks]: https://github.com/remarkjs/remark-breaks
 
 [remark-rehype]: https://github.com/remarkjs/remark-rehype
 
 [rehype-slug]: https://github.com/rehypejs/rehype-slug
 
 [string-width]: https://github.com/sindresorhus/string-width
+
+[typescript]: https://www.typescriptlang.org
+
+[unified]: https://github.com/unifiedjs/unified
+
+[wiki-xss]: https://en.wikipedia.org/wiki/Cross-site_scripting
+
+[api-options]: #options
+
+[api-remark-gfm]: #unifieduseremarkgfm-options
