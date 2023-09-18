@@ -386,8 +386,8 @@ versions of Node.js.
 
 When we cut a new major release, we drop support for unmaintained versions of
 Node.
-This means we try to keep the current release line, `remark-gfm@^3`, compatible
-with Node.js 12.
+This means we try to keep the current release line, `remark-gfm@^4`, compatible
+with Node.js 16.
 
 This plugin works with `remark-parse` version 11+ (`remark` version 15+).
 The previous version (v3) worked with `remark-parse` version 10 (`remark`
