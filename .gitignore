@@ -1,5 +1,6 @@
 *.d.ts
 *.log
+*.map
 *.tsbuildinfo
 .DS_Store
 coverage/
