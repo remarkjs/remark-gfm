@@ -1,6 +1,6 @@
 /**
- * @typedef {import('mdast').Root} Root
- * @typedef {import('remark-gfm').Options} Options
+ * @import {Root} from 'mdast'
+ * @import {Options} from 'remark-gfm'
  */
 
 import assert from 'node:assert/strict'
