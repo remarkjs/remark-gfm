@@ -29,7 +29,6 @@
   },
   "exports": "./index.js",
   "files": [
-    "index.d.ts.map",
     "index.d.ts",
     "index.js",
     "lib/"
@@ -86,6 +85,29 @@
   "version": "4.0.0",
   "xo": {
     "overrides": [
+      {
+        "files": [
+          "**/*.d.ts"
+        ],
+        "rules": {
+          "@typescript-eslint/array-type": [
+            "error",
+            {
+              "default": "generic"
+            }
+          ],
+          "@typescript-eslint/ban-types": [
+            "error",
+            {
+              "extendDefaults": true
+            }
+          ],
+          "@typescript-eslint/consistent-type-definitions": [
+            "error",
+            "interface"
+          ]
+        }
+      },
       {
         "files": [
           "test/**/*.js"
