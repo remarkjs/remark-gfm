@@ -61,8 +61,8 @@ test('fixtures', async function (t) {
         config = {stringLength: stringWidth}
       }
 
-      const proc = remark().use(remarkGfm, config)
-      const actual = proc.parse(input)
+      const processor = remark().use(remarkGfm, config)
+      const actual = processor.parse(input)
 
       try {
         output = String(await fs.readFile(outputUrl))
@@ -85,7 +85,7 @@ test('fixtures', async function (t) {
 
       assert.deepEqual(actual, expected)
 
-      assert.equal(String(await proc.process(input)), String(output))
+      assert.equal(String(await processor.process(input)), String(output))
     })
   }
 })

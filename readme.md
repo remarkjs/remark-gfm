@@ -13,28 +13,28 @@ strikethrough, tables, tasklists).
 
 ## Contents
 
-*   [What is this?](#what-is-this)
-*   [When should I use this?](#when-should-i-use-this)
-*   [Install](#install)
-*   [Use](#use)
-*   [API](#api)
-    *   [`unified().use(remarkGfm[, options])`](#unifieduseremarkgfm-options)
-    *   [`Options`](#options)
-*   [Examples](#examples)
-    *   [Example: `singleTilde`](#example-singletilde)
-    *   [Example: `stringLength`](#example-stringlength)
-*   [Bugs](#bugs)
-*   [Authoring](#authoring)
-*   [HTML](#html)
-*   [CSS](#css)
-*   [Syntax](#syntax)
-*   [Syntax tree](#syntax-tree)
-*   [Types](#types)
-*   [Compatibility](#compatibility)
-*   [Security](#security)
-*   [Related](#related)
-*   [Contribute](#contribute)
-*   [License](#license)
+* [What is this?](#what-is-this)
+* [When should I use this?](#when-should-i-use-this)
+* [Install](#install)
+* [Use](#use)
+* [API](#api)
+  * [`unified().use(remarkGfm[, options])`](#unifieduseremarkgfm-options)
+  * [`Options`](#options)
+* [Examples](#examples)
+  * [Example: `singleTilde`](#example-singletilde)
+  * [Example: `stringLength`](#example-stringlength)
+* [Bugs](#bugs)
+* [Authoring](#authoring)
+* [HTML](#html)
+* [CSS](#css)
+* [Syntax](#syntax)
+* [Syntax tree](#syntax-tree)
+* [Types](#types)
+* [Compatibility](#compatibility)
+* [Security](#security)
+* [Related](#related)
+* [Contribute](#contribute)
+* [License](#license)
 
 ## What is this?
 
@@ -206,8 +206,8 @@ tasklists).
 
 ###### Parameters
 
-*   `options` ([`Options`][api-options], optional)
-    — configuration
+* `options` ([`Options`][api-options], optional)
+  — configuration
 
 ###### Returns
 
@@ -219,16 +219,16 @@ Configuration (TypeScript type).
 
 ###### Fields
 
-*   `stringLength` (`((value: string) => number)`, default: `d => d.length`)
-    — detect the size of table cells, used when aligning cells
-*   `singleTilde` (`boolean`, default: `true`)
-    — whether to support strikethrough with a single tilde;
-    single tildes work on github.com, but are technically prohibited by GFM;
-    you can always use 2 or more tildes for strikethrough
-*   `tablePipeAlign` (`boolean`, default: `true`)
-    — whether to align table pipes
-*   `tableCellPadding` (`boolean`, default: `true`)
-    — whether to add a space of padding between table pipes and cells
+* `stringLength` (`((value: string) => number)`, default: `d => d.length`)
+  — detect the size of table cells, used when aligning cells
+* `singleTilde` (`boolean`, default: `true`)
+  — whether to support strikethrough with a single tilde;
+  single tildes work on github.com, but are technically prohibited by GFM;
+  you can always use 2 or more tildes for strikethrough
+* `tablePipeAlign` (`boolean`, default: `true`)
+  — whether to align table pipes
+* `tableCellPadding` (`boolean`, default: `true`)
+  — whether to add a space of padding between table pipes and cells
 
 ## Examples
 
@@ -321,21 +321,21 @@ The output of our code with these changes is as follows:
 For bugs present in GFM but not here, or other peculiarities that are
 supported, see each corresponding readme:
 
-*   [autolink literal](https://github.com/micromark/micromark-extension-gfm-autolink-literal#bugs)
-*   [footnote](https://github.com/micromark/micromark-extension-gfm-footnote#bugs)
-*   strikethrough: n/a
-*   [table](https://github.com/micromark/micromark-extension-gfm-table#bugs)
-*   tasklists: n/a
+* [autolink literal](https://github.com/micromark/micromark-extension-gfm-autolink-literal#bugs)
+* [footnote](https://github.com/micromark/micromark-extension-gfm-footnote#bugs)
+* strikethrough: n/a
+* [table](https://github.com/micromark/micromark-extension-gfm-table#bugs)
+* tasklists: n/a
 
 ## Authoring
 
 For recommendations on how to author GFM, see each corresponding readme:
 
-*   [autolink literal](https://github.com/micromark/micromark-extension-gfm-autolink-literal#authoring)
-*   [footnote](https://github.com/micromark/micromark-extension-gfm-footnote#authoring)
-*   [strikethrough](https://github.com/micromark/micromark-extension-gfm-strikethrough#authoring)
-*   [table](https://github.com/micromark/micromark-extension-gfm-table#authoring)
-*   [tasklists](https://github.com/micromark/micromark-extension-gfm-task-list-item#authoring)
+* [autolink literal](https://github.com/micromark/micromark-extension-gfm-autolink-literal#authoring)
+* [footnote](https://github.com/micromark/micromark-extension-gfm-footnote#authoring)
+* [strikethrough](https://github.com/micromark/micromark-extension-gfm-strikethrough#authoring)
+* [table](https://github.com/micromark/micromark-extension-gfm-table#authoring)
+* [tasklists](https://github.com/micromark/micromark-extension-gfm-task-list-item#authoring)
 
 ## HTML
 
@@ -346,31 +346,31 @@ See [`remark-rehype`][remark-rehype] for how that happens and how to change it.
 
 For info on how GitHub styles these features, see each corresponding readme:
 
-*   [autolink literal](https://github.com/micromark/micromark-extension-gfm-autolink-literal#css)
-*   [footnote](https://github.com/micromark/micromark-extension-gfm-footnote#css)
-*   [strikethrough](https://github.com/micromark/micromark-extension-gfm-strikethrough#css)
-*   [table](https://github.com/micromark/micromark-extension-gfm-table#css)
-*   [tasklists](https://github.com/micromark/micromark-extension-gfm-task-list-item#css)
+* [autolink literal](https://github.com/micromark/micromark-extension-gfm-autolink-literal#css)
+* [footnote](https://github.com/micromark/micromark-extension-gfm-footnote#css)
+* [strikethrough](https://github.com/micromark/micromark-extension-gfm-strikethrough#css)
+* [table](https://github.com/micromark/micromark-extension-gfm-table#css)
+* [tasklists](https://github.com/micromark/micromark-extension-gfm-task-list-item#css)
 
 ## Syntax
 
 For info on the syntax of these features, see each corresponding readme:
 
-*   [autolink literal](https://github.com/micromark/micromark-extension-gfm-autolink-literal#syntax)
-*   [footnote](https://github.com/micromark/micromark-extension-gfm-footnote#syntax)
-*   [strikethrough](https://github.com/micromark/micromark-extension-gfm-strikethrough#syntax)
-*   [table](https://github.com/micromark/micromark-extension-gfm-table#syntax)
-*   [tasklists](https://github.com/micromark/micromark-extension-gfm-task-list-item#syntax)
+* [autolink literal](https://github.com/micromark/micromark-extension-gfm-autolink-literal#syntax)
+* [footnote](https://github.com/micromark/micromark-extension-gfm-footnote#syntax)
+* [strikethrough](https://github.com/micromark/micromark-extension-gfm-strikethrough#syntax)
+* [table](https://github.com/micromark/micromark-extension-gfm-table#syntax)
+* [tasklists](https://github.com/micromark/micromark-extension-gfm-task-list-item#syntax)
 
 ## Syntax tree
 
 For info on the syntax tree of these features, see each corresponding readme:
 
-*   [autolink literal](https://github.com/syntax-tree/mdast-util-gfm-autolink-literal#syntax-tree)
-*   [footnote](https://github.com/syntax-tree/mdast-util-gfm-footnote#syntax-tree)
-*   [strikethrough](https://github.com/syntax-tree/mdast-util-gfm-strikethrough#syntax-tree)
-*   [table](https://github.com/syntax-tree/mdast-util-gfm-table#syntax-tree)
-*   [tasklists](https://github.com/syntax-tree/mdast-util-gfm-task-list-item#syntax-tree)
+* [autolink literal](https://github.com/syntax-tree/mdast-util-gfm-autolink-literal#syntax-tree)
+* [footnote](https://github.com/syntax-tree/mdast-util-gfm-footnote#syntax-tree)
+* [strikethrough](https://github.com/syntax-tree/mdast-util-gfm-strikethrough#syntax-tree)
+* [table](https://github.com/syntax-tree/mdast-util-gfm-table#syntax-tree)
+* [tasklists](https://github.com/syntax-tree/mdast-util-gfm-task-list-item#syntax-tree)
 
 ## Types
 
@@ -404,18 +404,18 @@ attacks.
 
 ## Related
 
-*   [`remark-github`][remark-github]
-    — link references to commits, issues, PRs, and users
-*   [`remark-breaks`][remark-breaks]
-    — support breaks without needing spaces or escapes (enters to `<br>`)
-*   [`remark-frontmatter`][remark-frontmatter]
-    — support frontmatter (YAML, TOML, and more)
-*   [`remark-directive`](https://github.com/remarkjs/remark-directive)
-    — support directives
-*   [`remark-math`](https://github.com/remarkjs/remark-math)
-    — support math
-*   [`remark-mdx`](https://github.com/mdx-js/mdx/tree/main/packages/remark-mdx)
-    — support MDX (ESM, JSX, expressions)
+* [`remark-github`][remark-github]
+  — link references to commits, issues, PRs, and users
+* [`remark-breaks`][remark-breaks]
+  — support breaks without needing spaces or escapes (enters to `<br>`)
+* [`remark-frontmatter`][remark-frontmatter]
+  — support frontmatter (YAML, TOML, and more)
+* [`remark-directive`](https://github.com/remarkjs/remark-directive)
+  — support directives
+* [`remark-math`](https://github.com/remarkjs/remark-math)
+  — support math
+* [`remark-mdx`](https://github.com/mdx-js/mdx/tree/main/packages/remark-mdx)
+  — support MDX (ESM, JSX, expressions)
 
 ## Contribute
 
