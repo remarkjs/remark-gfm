@@ -3,12 +3,7 @@
   "children": [
     {
       "type": "table",
-      "align": [
-        null,
-        "left",
-        "right",
-        "center"
-      ],
+      "align": [null, "left", "right", "center"],
       "children": [
         {
           "type": "tableRow",
