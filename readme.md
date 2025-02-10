@@ -433,53 +433,47 @@ abide by its terms.
 
 <!-- Definitions -->
 
-[build-badge]: https://github.com/remarkjs/remark-gfm/workflows/main/badge.svg
+[api-options]: #options
 
-[build]: https://github.com/remarkjs/remark-gfm/actions
+[api-remark-gfm]: #unifieduseremarkgfm-options
 
-[coverage-badge]: https://img.shields.io/codecov/c/github/remarkjs/remark-gfm.svg
-
-[coverage]: https://codecov.io/github/remarkjs/remark-gfm
-
-[downloads-badge]: https://img.shields.io/npm/dm/remark-gfm.svg
-
-[downloads]: https://www.npmjs.com/package/remark-gfm
-
-[size-badge]: https://img.shields.io/bundlejs/size/remark-gfm
-
-[size]: https://bundlejs.com/?q=remark-gfm
-
-[sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
+[author]: https://wooorm.com
 
 [backers-badge]: https://opencollective.com/unified/backers/badge.svg
 
-[collective]: https://opencollective.com/unified
+[build]: https://github.com/remarkjs/remark-gfm/actions
 
-[chat-badge]: https://img.shields.io/badge/chat-discussions-success.svg
+[build-badge]: https://github.com/remarkjs/remark-gfm/workflows/main/badge.svg
 
 [chat]: https://github.com/remarkjs/remark/discussions
 
-[npm]: https://docs.npmjs.com/cli/install
+[chat-badge]: https://img.shields.io/badge/chat-discussions-success.svg
+
+[coc]: https://github.com/remarkjs/.github/blob/HEAD/code-of-conduct.md
+
+[collective]: https://opencollective.com/unified
+
+[contributing]: https://github.com/remarkjs/.github/blob/HEAD/contributing.md
+
+[coverage]: https://codecov.io/github/remarkjs/remark-gfm
+
+[coverage-badge]: https://img.shields.io/codecov/c/github/remarkjs/remark-gfm.svg
+
+[downloads]: https://www.npmjs.com/package/remark-gfm
+
+[downloads-badge]: https://img.shields.io/npm/dm/remark-gfm.svg
 
 [esm]: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
 
 [esmsh]: https://esm.sh
 
-[health]: https://github.com/remarkjs/.github
-
-[contributing]: https://github.com/remarkjs/.github/blob/HEAD/contributing.md
-
-[support]: https://github.com/remarkjs/.github/blob/HEAD/support.md
-
-[coc]: https://github.com/remarkjs/.github/blob/HEAD/code-of-conduct.md
-
-[license]: license
-
-[author]: https://wooorm.com
-
 [gfm]: https://github.github.com/gfm/
 
 [hast]: https://github.com/syntax-tree/hast
+
+[health]: https://github.com/remarkjs/.github
+
+[license]: license
 
 [mdast-util-from-markdown]: https://github.com/syntax-tree/mdast-util-from-markdown
 
@@ -489,7 +483,11 @@ abide by its terms.
 
 [micromark-extension-gfm]: https://github.com/micromark/micromark-extension-gfm
 
+[npm]: https://docs.npmjs.com/cli/install
+
 [rehype]: https://github.com/rehypejs/rehype
+
+[rehype-slug]: https://github.com/rehypejs/rehype-slug
 
 [remark]: https://github.com/remarkjs/remark
 
@@ -501,16 +499,18 @@ abide by its terms.
 
 [remark-rehype]: https://github.com/remarkjs/remark-rehype
 
-[rehype-slug]: https://github.com/rehypejs/rehype-slug
+[size]: https://bundlejs.com/?q=remark-gfm
+
+[size-badge]: https://img.shields.io/bundlejs/size/remark-gfm
+
+[sponsors-badge]: https://opencollective.com/unified/sponsors/badge.svg
 
 [string-width]: https://github.com/sindresorhus/string-width
+
+[support]: https://github.com/remarkjs/.github/blob/HEAD/support.md
 
 [typescript]: https://www.typescriptlang.org
 
 [unified]: https://github.com/unifiedjs/unified
 
 [wiki-xss]: https://en.wikipedia.org/wiki/Cross-site_scripting
-
-[api-options]: #options
-
-[api-remark-gfm]: #unifieduseremarkgfm-options

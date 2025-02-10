@@ -20,7 +20,7 @@
     "prettier": "^3.0.0",
     "remark": "^15.0.0",
     "remark-cli": "^12.0.0",
-    "remark-preset-wooorm": "^10.0.0",
+    "remark-preset-wooorm": "^11.0.0",
     "string-width": "^6.0.0",
     "to-vfile": "^8.0.0",
     "type-coverage": "^2.0.0",
