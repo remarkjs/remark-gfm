@@ -7,7 +7,7 @@ export {default} from './lib/index.js'
  * Configuration for `remark-gfm`.
  *
  * Currently supports `singleTilde` as a parse option and
- * `tableCellPadding`, `tablePipeAlign`, and `stringLength` as
- * a serialization option.
+ * `firstLineBlank`, `stringLength`, `tableCellPadding`, and `tablePipeAlign`
+ * as serialization options.
  */
 export interface Options extends MicromarkOptions, MdastOptions {}

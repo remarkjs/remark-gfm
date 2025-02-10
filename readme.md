@@ -219,6 +219,8 @@ Configuration (TypeScript type).
 
 ###### Fields
 
+* `firstLineBlank` (`boolean`, default: `false`)
+  — serialize with a blank line for the first line of footnote definitions
 * `stringLength` (`((value: string) => number)`, default: `d => d.length`)
   — detect the size of table cells, used when aligning cells
 * `singleTilde` (`boolean`, default: `true`)
